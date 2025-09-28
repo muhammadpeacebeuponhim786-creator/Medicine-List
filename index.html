@@ -216,12 +216,44 @@
   font-size: 1rem;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .accordion {
-  max-width: 300px;
-  margin: 0; /* align left */
   display: grid;
-  gap: 10px;
+  grid-template-columns: repeat(2, 1fr); /* two accordions side by side */
+  gap: 20px; /* space between accordions */
+  max-width: none; /* remove narrow width limit */
+  margin: 0;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .accordion-item {
   background: #f9fdff;
   border-radius: 10px;
