@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>FAZAL DIN MEMORIAL GYNAE HOSPITAL 🍼👩‍⚕️</title>
+  <title>FAZAL DIN MEMORIAL GYNAE HOSPITAL</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="FAZAL DIN MEMORIAL GYNAE HOSPITAL — Available Tests & Medicines">
 
@@ -10,643 +10,108 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 
   <style>
-    /* ===================== MERGED SITE CSS ===================== */
+    body { font-family: Arial, sans-serif; margin:0; background:#f9f9f9; }
 
-    /* Reset / base */
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #f8fbff;
-      color: #121212;
-      line-height: 1.5;
-      scroll-behavior: smooth;
-    }
-
-    /* Floating logo */
-    .floating-logo {
-      position: fixed;
-      top: 12px;
-      right: 12px;
-      z-index: 9999;
-    }
-    .floating-logo img {
-      width: 80px;
-      height: 80px;
-      border-radius: 50%;
-      box-shadow: 0 6px 18px rgba(2,6,23,0.18);
-      transition: transform 8s ease-in-out;
-    }
-    .floating-logo img:hover { transform: rotate(360deg); }
-
-    /* Header */
-    .site-header {
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      gap:20px;
-      padding:20px;
-      border-radius:18px;
-      background: linear-gradient(90deg,#fff,#f0f7ff);
-      box-shadow: 0 6px 22px rgba(16,24,40,0.08);
-      flex-wrap:wrap;
-      position: relative;
-      z-index: 10;
-      margin: 16px;
-    }
-    .brand { display:flex; gap:16px; align-items:center; }
-    .logo {
-      width:70px; height:70px; border-radius:14px;
-      display:grid; place-items:center; font-weight:800; font-size:20px;
-      background: linear-gradient(135deg,#7c5cff,#4be1c3); color:#fff;
-    }
-    .site-header h1 { margin:0; font-size:1.2rem; }
-    .site-header p { margin:2px 0; color:#444; font-size:0.95rem; }
-
-    .contact { display:flex; align-items:center; gap:10px; flex-wrap:wrap; }
-    .btn-phone, .btn-cta {
-      text-decoration:none; padding:8px 14px; border-radius:50px;
-      font-weight:600; border:none; box-shadow:0 3px 10px rgba(2,6,23,0.1);
-    }
-    .btn-phone { background:#fff; color:#0b1220; }
-    .btn-cta { background: linear-gradient(90deg,#ff6b6b,#ffb86b); color:white; }
-    .btn-whatsapp { background: #25d366; padding:10px; border-radius:50%; color:white; display:flex; align-items:center; justify-content:center; }
-    .btn-whatsapp i { font-size:20px; }
-
-    /* Welcome / Hero */
-    #welcome {
-      padding: 80px 20px;
-      color: white;
-      text-align: center;
-      border-radius: 16px;
-      background: #555;
-      background-size: cover;
-      background-position: center;
-      position: relative;
-      overflow: hidden;
-      margin: 16px;
-    }
-    #welcome::before {
-      content:""; position:absolute; inset:0; background:rgba(0,0,0,0.45); z-index:0;
-    }
-    #welcome .inner { position:relative; z-index:1; max-width:1000px; margin:auto; }
-    #welcome h2 { font-size:2.3rem; margin:0 0 10px; }
-    #welcome p { font-size:1.1rem; margin:0 0 16px; }
-
-    /* Services */
-    .services { padding:60px 20px; background:#f9f9f9; margin:16px; border-radius:12px; }
-    .services h2 { text-align:center; margin-bottom:24px; }
-    .cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:20px; }
-    .card { background:white; padding:20px; border-radius:12px; text-align:center; box-shadow:0 4px 10px rgba(0,0,0,0.06); transition:transform .25s; }
-    .card:hover { transform:translateY(-6px); }
-    .card i { font-size:36px; color:#0077b6; margin-bottom:10px; }
-
-    /* Doctors */
-    .doctors { padding: 60px 20px; background: linear-gradient(135deg,#f9f9ff,#e6f0ff); margin:16px; border-radius:12px; }
-    .doctor-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:30px; justify-items:center; }
-    .doctor-card { background:white; border-radius:20px; box-shadow:0 8px 20px rgba(0,0,0,0.06); padding:30px 20px; max-width:320px; }
-
-    /* Nurses */
-    .nurses-section { background:#fff5f8; border-radius:16px; padding:50px 20px; margin:16px 16px 0 16px; box-shadow: 0 6px 16px rgba(0,0,0,0.05); }
-    .nurses { display:grid; grid-template-columns:repeat(auto-fit,minmax(160px,1fr)); gap:20px; }
-
-    /* Facilities */
-    .facilities { padding:60px 20px; background:#f9f9f9; margin:16px; border-radius:12px; }
-    .facility-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:20px; }
-
-    /* Tests section (kept intact) */
-    .tests-section { padding:40px 20px; margin: 16px; background: white; border-radius:12px; box-shadow:0 6px 20px rgba(0,0,0,0.04); }
-    .tests-section h2 { text-align:center; color:#0077b6; }
-    .select-all { text-align:center; margin-bottom:12px; }
-    .tests-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:18px; max-width:1200px; margin:0 auto; }
-    .tests-grid h3 { text-align:center; border-bottom:2px solid #94d2bd; margin-bottom:10px; padding-bottom:6px; }
-    .tests-grid label { display:block; padding:6px 10px; background:#f0f9ff; border-radius:6px; margin:6px 0; cursor:pointer; }
-    .tests-grid label:hover { background:#caf0f8; }
-
+    /* Floating Total Button */
     #liveTotal {
       font-weight:700; font-size:16px; padding:12px 16px; border-radius:12px;
-      background:#9e9e9e; color:white; position:fixed; bottom:20px; right:20px;
+      background:#0077b6; color:white; position:fixed; bottom:20px; right:20px;
       box-shadow:0 4px 12px rgba(0,0,0,0.3); z-index:2000; cursor:pointer;
     }
+
     #resultModal { display:none; position:fixed; inset:0; align-items:center; justify-content:center; background:rgba(0,0,0,0.6); }
     #modalBox { background:#fff; padding:20px; border-radius:12px; max-width:480px; width:90%; box-shadow:0 4px 12px rgba(0,0,0,0.3); }
 
-    /* Location / Map */
-    .location { padding:40px 20px; margin:16px; background:white; border-radius:12px; box-shadow:0 6px 20px rgba(0,0,0,0.04); }
-    .map iframe { width:100%; max-width:900px; height:400px; border:0; border-radius:12px; }
-
-    /* Footer */
-    .site-footer {
-      display:flex; justify-content:space-between; align-items:center;
-      padding:20px; margin:16px; border-radius:16px;
-      background: linear-gradient(90deg,#fffbf5,#f7fbff);
-      box-shadow: 0 4px 12px rgba(0,0,0,0.06);
-    }
-    .social a { margin-left:10px; font-size:1.2rem; padding:8px; border-radius:50%; color:white; display:inline-flex; align-items:center; justify-content:center; }
-    .social a.facebook{ background:#1877f2;} .social a.instagram{ background:#e1306c;} .social a.whatsapp{ background:#25d366; }
-
-    /* ================= Medicines (matched theme) ================= */
-    .med-section { margin: 16px; padding: 20px; background: white; border-radius: 12px; box-shadow: 0 6px 20px rgba(0,0,0,0.04); }
-    .med-search-box { margin: 10px 0 6px 0; display:flex; gap:10px; max-width:760px; }
-    .med-search-box input { flex:1; padding:10px; border:1px solid #d6e9fb; border-radius:8px; font-size:1rem; }
-    .med-search-box button { padding:10px 14px; background: linear-gradient(90deg,#0077b6,#005fa3); color:#fff; border:none; border-radius:8px; cursor:pointer; }
-    .med-counter { margin:8px 0 12px 0; color:#444; font-size:0.95rem; }
-
-    .med-table-container { overflow-x:auto; }
-    .med-table { width:100%; border-collapse:collapse; background:white; border-radius:8px; overflow:hidden; }
-    .med-table caption { caption-side:top; padding:12px 16px; font-weight:700; color:#0077b6; background:#f6fbff; text-align:left; }
-    .med-table th, .med-table td { padding:12px 14px; border-bottom:1px solid #eee; text-align:left; vertical-align:middle; }
-    .med-table th { background:#f0f8ff; text-transform:uppercase; font-size:0.85rem; }
-    .med-table tr:hover { background:#fbfdff; }
-    .med-table td[data-label="Purchase Rate"], .med-table td[data-label="Sale Rate"] { text-align:right; }
-    .med-table mark { background:#ffeb3b; color:#111; padding:0 2px; border-radius:2px; }
-
-    /* Back-to-top circle (bottom center) */
-    .back-to-top {
-      position: fixed;
-      bottom: 18px;
-      left: 50%;
-      transform: translateX(-50%);
-      background: transparent;
-      border: 2px solid #0077b6;
-      color: #0077b6;
-      width: 52px;
-      height: 52px;
-      border-radius: 50%;
-      display:flex; align-items:center; justify-content:center; cursor:pointer;
-      transition: background .22s, color .22s, transform .12s; z-index:99999; backdrop-filter: blur(2px);
-    }
-    .back-to-top:hover { background:#0077b6; color:#fff; transform: translateX(-50%) scale(1.03); }
-
-    /* Responsive adjustments */
-    @media (max-width: 880px) {
-      .site-header { padding:14px; margin: 12px; }
-      #welcome { padding:60px 12px; }
-    }
-    @media (max-width: 720px) {
-      .med-search-box { padding: 0 12px; }
-      .med-table th, .med-table td { font-size:0.92rem; padding:10px; }
-    }
-    </style>
+    /* Medicine Section */
+    .med-section { margin:20px; padding:20px; background:white; border-radius:12px; box-shadow:0 6px 20px rgba(0,0,0,0.04); }
+    .med-search-box { margin-bottom:12px; display:flex; gap:10px; }
+    .med-search-box input { flex:1; padding:10px; border:1px solid #ccc; border-radius:6px; }
+    .medicine-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:10px; }
+    .medicine-grid label { display:block; background:#f0f9ff; padding:10px; border-radius:8px; cursor:pointer; }
+    .medicine-grid label:hover { background:#d9f0ff; }
+  </style>
 </head>
 
 <body>
+  <h1>FAZAL DIN MEMORIAL GYNAE HOSPITAL</h1>
 
-<!-- Floating logo -->
-<a href="index.html" class="floating-logo" aria-label="Home">
-  <img src="IMG-20250904-WA0005.jpg" alt="FD Logo">
-</a>
+  <!-- ================== TESTS ================== -->
+  <section id="tests" class="tests-section">
+    <h2>Available Tests</h2>
+    <label><input type="checkbox" class="test" value="700" data-name="CBC"> CBC (Rs. 700)</label>
+    <label><input type="checkbox" class="test" value="300" data-name="HB%"> HB% (Rs. 300)</label>
+    <label><input type="checkbox" class="test" value="200" data-name="Blood Group"> Blood Group (Rs. 200)</label>
+  </section>
 
-<!-- Header (kept original) -->
-<header class="site-header" role="banner">
-  <div class="brand">
-    <div class="logo" aria-hidden="true">FD</div>
-    <div>
-      <h1>FAZAL DIN MEMORIAL <span style="color:#4b9fff">GYNAE</span> HOSPITAL 🍼</h1>
-      <p>College Road, Narowal · CARING FOR MOTHERS ❤️ & NEWBORNS 👶</p>
-      <p>Administrator: <strong>Dr. Sheeba Saeed</strong></p>
+  <!-- ================== MEDICINES ================== -->
+  <section class="med-section">
+    <h2>Available Medicines</h2>
+    <div class="med-search-box">
+      <input type="text" id="medSearch" placeholder="Search medicines...">
+    </div>
+    <div id="medicineGrid" class="medicine-grid">
+      <label><input type="checkbox" class="price-check" value="63" data-name="Duphaston"> Duphaston (Rs. 63)</label>
+      <label><input type="checkbox" class="price-check" value="11" data-name="Ibret Folic 500 Gradumet"> Ibret Folic 500 Gradumet (Rs. 11)</label>
+      <label><input type="checkbox" class="price-check" value="180" data-name="T-T- Inj"> T-T- Inj (Rs. 180)</label>
+    </div>
+  </section>
+
+  <!-- TOTAL BUTTON -->
+  <div id="liveTotal"><span id="liveText">0 selected | Total: Rs. 0</span></div>
+
+  <!-- MODAL -->
+  <div id="resultModal">
+    <div id="modalBox">
+      <h3>Selected Items</h3>
+      <div id="modalContent"></div>
+      <button onclick="closeModal()">Close</button>
     </div>
   </div>
 
-  <div class="contact">
-    <a href="tel:03004461365" class="btn-phone"><i class="fa-solid fa-phone"></i> SAEED AHMED 0300-4461365</a>
-    <a href="https://wa.me/923004461365" target="_blank" class="btn-whatsapp" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
-    <a href="#appointment" class="btn-cta">MAKE APPOINTMENT</a>
-  </div>
-</header>
-
-<!-- Welcome / Hero (kept) -->
-<section id="welcome" class="welcome-section">
-  <div class="inner">
-    <h2>Welcome to FAZAL DIN MEMORIAL GYNAE HOSPITAL</h2>
-    <p>Compassionate care for mothers & newborns — modern facilities & expert staff.</p>
-  </div>
-</section>
-
-<!-- Services -->
-<section class="services" aria-labelledby="servicesHeading">
-  <h2 id="servicesHeading">OUR SERVICES 👩‍⚕️</h2>
-  <div class="cards">
-    <div class="card"><i class="fa-solid fa-baby"></i><h3>Maternity Care</h3><p>Comprehensive prenatal & postnatal support.</p></div>
-    <div class="card"><i class="fa-solid fa-heart-pulse"></i><h3>Gynecology</h3><p>Expert diagnosis & treatment for women’s health.</p></div>
-    <div class="card"><i class="fa-solid fa-vial"></i><h3>Lab Tests</h3><p>Accurate, affordable, and fast test results.</p></div>
-    <div class="card"><i class="fa-solid fa-stethoscope"></i><h3>Consultations</h3><p>Friendly, professional medical advice for families.</p></div>
-  </div>
-</section>
-
-<!-- Doctors -->
-<section class="doctors" aria-labelledby="doctorsHeading">
-  <h2 id="doctorsHeading">👩‍⚕️ Our Doctors</h2>
-  <div class="doctor-grid">
-    <div class="doctor-card"><div class="doctor-photo"><img src="" alt=""></div><div class="doctor-info"><h3>Dr. Hamna Sajawal</h3><p class="speciality">Gynecologist</p><p class="degree">M.B.B.S</p></div></div>
-    <div class="doctor-card"><div class="doctor-photo"><img src="" alt=""></div><div class="doctor-info"><h3>Dr. Abeera Azmat</h3><p class="speciality">Gynecologist</p><p class="degree">M.B.B.S</p></div></div>
-  </div>
-</section>
-
-<!-- Nurses -->
-<section class="nurses-section" aria-labelledby="nurseHeading">
-  <h2 id="nurseHeading">OUR NURSING TEAM 👩‍⚕️</h2>
-  <div class="nurses">
-    <div class="nurse-card"><div class="avatar">MI</div><div class="name">Muzdalifa Imtiaz</div></div>
-    <div class="nurse-card"><div class="avatar">N</div><div class="name">Nighat</div></div>
-    <div class="nurse-card"><div class="avatar">S</div><div class="name">Shabana</div></div>
-    <div class="nurse-card"><div class="avatar">A</div><div class="name">Amina</div></div>
-    <div class="nurse-card"><div class="avatar">Z</div><div class="name">Zunaira</div></div>
-  </div>
-  <p class="nurse-note">💖 Providing 24/7 neonatal support with dedication and care 👶</p>
-</section>
-
-<!-- Facilities -->
-<section class="facilities" aria-labelledby="facilitiesHeading">
-  <h2 id="facilitiesHeading">OUR FACILITIES 🏥</h2>
-  <div class="facility-grid">
-    <div class="facility"><h3>Modern Operation Theatre</h3></div>
-    <div class="facility"><h3>Labor Rooms</h3></div>
-    <div class="facility"><h3>Well-equipped Lab</h3></div>
-    <div class="facility"><h3>Pharmacy</h3></div>
-  </div>
-</section>
-
-<!-- ================== AVAILABLE TESTS (kept intact from File 2) ================== -->
-<section id="tests" class="tests-section" aria-labelledby="testsHeading">
-  <h2 id="testsHeading">🧪 AVAILABLE TESTS</h2>
-  <div class="select-all">
-    <label><input type="checkbox" id="selectAll"> <strong>SELECT ALL TESTS</strong></label>
-  </div>
-
-  <div class="tests-grid">
-    <div>
-      <h3>🩸 BLOOD TESTS</h3>
-      <label><input type="checkbox" class="select-category"> <strong>Select All</strong></label><br>
-      <label><input type="checkbox" class="test" value="700" data-name="CBC"> CBC (Rs. 700)</label>
-      <label><input type="checkbox" class="test" value="300" data-name="HB%"> HB% (Rs. 300)</label>
-      <label><input type="checkbox" class="test" value="200" data-name="Blood Group"> Blood Group (Rs. 200)</label>
-      <label><input type="checkbox" class="test" value="100" data-name="BSR"> BSR (Rs. 100)</label>
-      <label><input type="checkbox" class="test" value="200" data-name="ESR"> ESR (Rs. 200)</label>
-      <label><input type="checkbox" class="test" value="2000" data-name="HBA1C"> HBA1C (Rs. 2000)</label>
-      <label><input type="checkbox" class="test" value="600" data-name="CRP"> CRP (Rs. 600)</label>
-      <label><input type="checkbox" class="test" value="400" data-name="LDH"> LDH (Rs. 400)</label>
-      <label><input type="checkbox" class="test" value="350" data-name="Cholesterol"> Cholesterol (Rs. 350)</label>
-      <label><input type="checkbox" class="test" value="350" data-name="Uric Acid"> Uric Acid (Rs. 350)</label>
-      <label><input type="checkbox" class="test" value="400" data-name="PT"> PT (Rs. 400)</label>
-      <label><input type="checkbox" class="test" value="400" data-name="APTT"> APTT (Rs. 400)</label>
-      <label><input type="checkbox" class="test" value="400" data-name="INR"> INR (Rs. 400)</label>
-      <label><input type="checkbox" class="test" value="1800" data-name="Cross Match"> Cross Match (Rs. 1800)</label>
-    </div>
-
-    <div>
-      <h3>🧬 HORMONE TESTS</h3>
-      <label><input type="checkbox" class="select-category"> <strong>Select All</strong></label><br>
-      <label><input type="checkbox" class="test" value="1500" data-name="FSH"> FSH (Rs. 1500)</label>
-      <label><input type="checkbox" class="test" value="1500" data-name="LH"> LH (Rs. 1500)</label>
-      <label><input type="checkbox" class="test" value="1500" data-name="Prolactin"> Prolactin (Rs. 1500)</label>
-      <label><input type="checkbox" class="test" value="1700" data-name="Testosterone"> Testosterone (Rs. 1700)</label>
-      <label><input type="checkbox" class="test" value="1700" data-name="Progesterone"> Progesterone (Rs. 1700)</label>
-      <label><input type="checkbox" class="test" value="1500" data-name="Insulin"> Insulin (Rs. 1500)</label>
-      <label><input type="checkbox" class="test" value="2800" data-name="T3 T4 TSH"> T3 T4 TSH (Rs. 2800)</label>
-      <label><input type="checkbox" class="test" value="900" data-name="TSH"> TSH (Rs. 900)</label>
-      <label><input type="checkbox" class="test" value="1300" data-name="B HCG"> B HCG (Rs. 1300)</label>
-      <label><input type="checkbox" class="test" value="2200" data-name="Beta HCG"> Beta HCG (Rs. 2200)</label>
-    </div>
-
-    <div>
-      <h3>🦠 INFECTIOUS DISEASES</h3>
-      <label><input type="checkbox" class="select-category"> <strong>Select All</strong></label><br>
-      <label><input type="checkbox" class="test" value="1200" data-name="HCV ELIZA"> HCV ELIZA (Rs. 1200)</label>
-      <label><input type="checkbox" class="test" value="1200" data-name="HBS ELIZA"> HBS ELIZA (Rs. 1200)</label>
-      <label><input type="checkbox" class="test" value="4000" data-name="HCV PCR (QL)"> HCV PCR (QL) (Rs. 4000)</label>
-      <label><input type="checkbox" class="test" value="5000" data-name="HBV PCR (QN)"> HBV PCR (QN) (Rs. 5000)</label>
-      <label><input type="checkbox" class="test" value="500" data-name="HIV"> HIV (Rs. 500)</label>
-      <label><input type="checkbox" class="test" value="700" data-name="H.Pylori"> H.Pylori (Rs. 700)</label>
-      <label><input type="checkbox" class="test" value="600" data-name="Typhidot"> Typhidot (Rs. 600)</label>
-      <label><input type="checkbox" class="test" value="800" data-name="Malaria"> Malaria (Rs. 800)</label>
-      <label><input type="checkbox" class="test" value="600" data-name="Dengue"> Dengue (Rs. 600)</label>
-      <label><input type="checkbox" class="test" value="500" data-name="VDRL"> VDRL (Rs. 500)</label>
-      <label><input type="checkbox" class="test" value="250" data-name="HCV"> HCV (Rs. 250)</label>
-      <label><input type="checkbox" class="test" value="250" data-name="HBV"> HBV (Rs. 250)</label>
-      <label><input type="checkbox" class="test" value="300" data-name="Anti HCV"> Anti HCV (Rs. 300)</label>
-    </div>
-
-    <div>
-      <h3>🧫 BIOCHEMISTRY</h3>
-      <label><input type="checkbox" class="select-category"> <strong>Select All</strong></label><br>
-      <label><input type="checkbox" class="test" value="700" data-name="RFTs (Renal Function Tests)"> RFTs (Rs. 700)</label>
-      <label><input type="checkbox" class="test" value="500" data-name="Calcium"> Calcium (Rs. 500)</label>
-      <label><input type="checkbox" class="test" value="800" data-name="S Electrolytes"> S Electrolytes (Rs. 800)</label>
-      <label><input type="checkbox" class="test" value="800" data-name="S Amylase"> S Amylase (Rs. 800)</label>
-      <label><input type="checkbox" class="test" value="1000" data-name="LFT (Liver Function Tests)"> LFT (Rs. 1000)</label>
-      <label><input type="checkbox" class="test" value="700" data-name="Lipid Profile"> Lipid Profile (Rs. 700)</label>
-    </div>
-
-    <div>
-      <h3>🧩 IMMUNOLOGY</h3>
-      <label><input type="checkbox" class="select-category"> <strong>Select All</strong></label><br>
-      <label><input type="checkbox" class="test" value="1500" data-name="IGE"> IMMUNOGLOBIN E (Rs. 1500)</label>
-      <label><input type="checkbox" class="test" value="700" data-name="RA Factor"> RA Factor (Rs. 700)</label>
-    </div>
-
-    <div>
-      <h3>🩻 IMAGING</h3>
-      <label><input type="checkbox" class="select-category"> <strong>Select All</strong></label><br>
-      <label><input type="checkbox" class="test" value="1200" data-name="Digital X-Ray"> DIGITAL X-RAY (Rs. 1200)</label>
-    </div>
-  </div>
-</section>
-
-<!-- live total & modal (kept) -->
-<div id="liveTotal"><span id="liveText">0 tests | Total: Rs. 0</span></div>
-<div id="resultModal"><div id="modalBox"><h3>SELECTED TESTS</h3><div id="modalContent"></div><button onclick="closeModal()">Close</button></div></div>
-
-<!-- Location -->
-<section id="location" class="location" aria-labelledby="locationHeading">
-  <h2 id="locationHeading">📍 Our Location</h2>
-  <div class="map" style="text-align:center;">
-    <iframe src="https://www.google.com/maps?q=32.0950213, 74.8813913&hl=en&z=16&output=embed" width="100%" height="400" style="border:0; border-radius:12px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    <p style="text-align:center; margin-top:10px;">
-      <a href="https://maps.google.com/?q=32.0999,74.8731" target="_blank" style="color:#0077b6; font-weight:600; text-decoration:none;">👉 Open in Google Maps</a>
-    </p>
-  </div>
-</section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- ================== AVAILABLE MEDICINES ================== -->
-<section id="medicines" class="tests-section" aria-labelledby="medicinesHeading">
-  <h2 id="medicinesHeading"> AVAILABLE MEDICINES</h2>
-
-  <!-- Search box -->
-  <div class="select-all">
-    <input type="text" id="medSearch" placeholder=" Search medicines..." style="padding:8px 12px; width:80%; max-width:500px; border:1px solid #ddd; border-radius:6px;">
-  </div>
-
-  <div class="tests-grid" id="medicineGrid">
-    <!-- ABBOT -->
-    <div>
-      <h3>ABBOT</h3>
-      <label><input type="checkbox" class="price-check" data-price="63" data-name="Duphaston"> Duphaston (Rs. 63)</label>
-      <label><input type="checkbox" class="price-check" data-price="11" data-name="Ibret Folic 500 Gradumet"> Ibret Folic 500 Gradumet (Rs. 11)</label>
-      <label><input type="checkbox" class="price-check" data-price="180" data-name="T-T- Inj"> T-T- Inj (Rs. 180)</label>
-      <label><input type="checkbox" class="price-check" data-price="50" data-name="Surgical Tape Kit"> Surgical Tape Kit (Rs. 50)</label>
-      <label><input type="checkbox" class="price-check" data-price="1000" data-name="MLITE-1"> MLITE-1 (Rs. 1000)</label>
-      <label><input type="checkbox" class="price-check" data-price="50" data-name="D-Gest"> D-Gest (Rs. 50)</label>
-      <label><input type="checkbox" class="price-check" data-price="88" data-name="ENZ-10"> ENZ-10 (Rs. 88)</label>
-      <label><input type="checkbox" class="price-check" data-price="48" data-name="ENZ-10 50 MG"> ENZ-10 50 MG (Rs. 48)</label>
-    </div>
-
-    <!-- AMROS -->
-    <div>
-      <h3>AMROS</h3>
-      <label><input type="checkbox" class="price-check" data-price="12" data-name="Synto Inj"> Synto Inj (Rs. 12)</label>
-    </div>
-
-    <!-- ANSELL -->
-    <div>
-      <h3>ANSELL</h3>
-      <label><input type="checkbox" class="price-check" data-price="250" data-name="Surgical Gloves No 7"> Surgical Gloves No 7 (Rs. 250)</label>
-      <label><input type="checkbox" class="price-check" data-price="251" data-name="Surgical Gloves No 7.5"> Surgical Gloves No 7.5 (Rs. 251)</label>
-    </div>
-
-    <!-- APSIS -->
-    <div>
-      <h3>APSIS</h3>
-      <label><input type="checkbox" class="price-check" data-price="140" data-name="ETT Tube"> ETT Tube (Rs. 140)</label>
-      <label><input type="checkbox" class="price-check" data-price="44" data-name="Movegut Sachet"> Movegut Sachet (Rs. 44)</label>
-      <label><input type="checkbox" class="price-check" data-price="140" data-name="Dextol Water 5% 1000ml"> Dextol Water 5% 1000ml (Rs. 140)</label>
-      <label><input type="checkbox" class="price-check" data-price="130" data-name="NS 1000ml"> NS 1000ml (Rs. 130)</label>
-      <label><input type="checkbox" class="price-check" data-price="150" data-name="RL 1000ml"> RL 1000ml (Rs. 150)</label>
-      <label><input type="checkbox" class="price-check" data-price="120" data-name="RL 500ml"> RL 500ml (Rs. 120)</label>
-    </div>
-  </div>
-</section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- Single total box -->
-
-
-<!-- Single total box (used for both tests + medicines) -->
-
-
-<!-- Footer (kept) -->
-<footer class="site-footer" role="contentinfo">
-  <div><h3>FAZAL DIN MEMORIAL GYNAE HOSPITAL 👩‍⚕️</h3><p>College Road, Narowal</p></div>
-  <div><p>© <span id="year"></span> ALL RIGHTS RESERVED</p><p>MADE WITH ♥ FOR THE COMMUNITY</p></div>
-  <div class="social">
-    <a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a>
-    <a href="#" class="instagram"><i class="fab fa-instagram"></i></a>
-    <a href="https://wa.me/923004461365" class="whatsapp"><i class="fab fa-whatsapp"></i></a>
-  </div>
-</footer>
-
-<!-- Back-to-Top button (bottom center) -->
-<button class="back-to-top" id="backToTop" aria-label="Back to top">
-  <i class="fas fa-arrow-up" aria-hidden="true"></i>
-</button>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- ================= SCRIPTS ================= -->
-<script>
-  // ----------------- YEAR -----------------
-  document.getElementById('year').textContent = new Date().getFullYear();
-
-  // ----------------- TOTAL CALCULATION (Tests + Medicines) -----------------
-  function updateTotal() {
-    let total = 0, count = 0;
-    const allChecks = document.querySelectorAll('.test, .price-check');
-
-    allChecks.forEach(c => {
-      if (c.checked) {
-        total += parseInt(c.value || c.dataset.price);
-        count++;
-      }
-    });
-
-    document.getElementById('liveText').textContent = `${count} selected | Total: Rs. ${total}`;
-
-    // Sync category checkboxes (tests only)
-    document.querySelectorAll('.select-category').forEach(catBox => {
-      const categoryDiv = catBox.closest('div');
-      const tests = categoryDiv.querySelectorAll('.test');
-      const allChecked = [...tests].length && [...tests].every(t => t.checked);
-      catBox.checked = allChecked;
-    });
-
-    // Sync global Select All (tests only)
-    const allTests = document.querySelectorAll('.test');
-    const globalSelect = document.getElementById('selectAll');
-    if (globalSelect) {
-      const everythingChecked = [...allTests].length && [...allTests].every(t => t.checked);
-      globalSelect.checked = everythingChecked;
+  <script>
+    // TOTAL CALCULATION
+    function updateTotal() {
+      let total = 0, count = 0;
+      const allChecks = document.querySelectorAll('.test, .price-check');
+      allChecks.forEach(c => {
+        if (c.checked) {
+          total += parseInt(c.value || c.dataset.price);
+          count++;
+        }
+      });
+      document.getElementById('liveText').textContent = `${count} selected | Total: Rs. ${total}`;
     }
-  }
 
-  // Attach listeners
-  document.querySelectorAll('.test, .price-check').forEach(cb =>
-    cb.addEventListener('change', updateTotal)
-  );
+    document.querySelectorAll('.test, .price-check').forEach(cb =>
+      cb.addEventListener('change', updateTotal)
+    );
 
-  const testsGlobalSelect = document.getElementById('selectAll');
-  if (testsGlobalSelect) {
-    testsGlobalSelect.addEventListener('change', function () {
-      const allTests = document.querySelectorAll('.test');
-      const allCategories = document.querySelectorAll('.select-category');
-      allTests.forEach(c => (c.checked = this.checked));
-      allCategories.forEach(c => (c.checked = this.checked));
-      updateTotal();
-    });
-  }
+    // MODAL
+    document.getElementById('liveTotal').onclick = () => {
+      let boxes=document.querySelectorAll('.test:checked, .price-check:checked');
+      let total=0, list="<ul>";
+      boxes.forEach(cb=>{
+        let price=parseInt(cb.value || cb.dataset.price);
+        let name=cb.dataset.name || cb.nextSibling.textContent.trim();
+        total+=price;
+        list+=`<li>${name} - Rs. ${price}</li>`;
+      });
+      list+="</ul><strong>Total: Rs. "+total+"</strong>";
+      document.getElementById('modalContent').innerHTML = list;
+      document.getElementById('resultModal').style.display="flex";
+    };
+    function closeModal(){ document.getElementById('resultModal').style.display="none"; }
 
-  document.querySelectorAll('.select-category').forEach(selectBox => {
-    selectBox.addEventListener('change', function () {
-      const categoryDiv = this.closest('div');
-      const tests = categoryDiv.querySelectorAll('.test');
-      tests.forEach(t => (t.checked = this.checked));
-      updateTotal();
-    });
-  });
-
-  updateTotal(); // initialize
-
-  // ----------------- MODAL -----------------
-  function updateModal() {
-    let boxes = document.querySelectorAll('.test:checked, .price-check:checked');
-    let total = 0, count = 0, list = "<ul>";
-    boxes.forEach(cb => {
-      let price = parseInt(cb.value || cb.dataset.price);
-      let name = cb.dataset.name || cb.nextSibling.textContent.trim();
-      total += price; count++;
-      list += `<li>${name} - Rs. ${price}</li>`;
-    });
-    list += "</ul>";
-    document.getElementById('modalContent').innerHTML =
-      (count ? list+`<strong>Total: Rs. ${total}</strong>` : "No item selected!");
-    document.getElementById('liveText').textContent = `${count} selected | Total: Rs. ${total}`;
-  }
-
-  document.getElementById('liveTotal').onclick = () =>
-    document.getElementById('resultModal').style.display = "flex";
-  function closeModal(){ document.getElementById('resultModal').style.display="none"; }
-
-  // ----------------- SLIDESHOW -----------------
-  const welcomeSection = document.getElementById("welcome");
-  const images = [
-    "IMG-20250904-WA0005.jpg",
-    "IMG-20250918-WA0062.jpg",
-    "IMG-20250918-WA0064.jpg",
-    "IMG-20250918-WA0066.jpg",
-    "images (1).jpeg",
-    "images (2).jpeg",
-    "images (5)~2.jpg"
-  ];
-  let index = 0;
-  function changeBackground() {
-    if (!welcomeSection) return;
-    welcomeSection.style.backgroundImage = `url('${images[index]}')`;
-    index = (index + 1) % images.length;
-  }
-  changeBackground();
-  setInterval(changeBackground, 5000);
-
-  // ----------------- BACK TO TOP -----------------
-  document.getElementById("backToTop").addEventListener("click", () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  });
-
-  // ----------------- MEDICINE SEARCH -----------------
-  const medSearch = document.getElementById('medSearch');
-  const medItems = document.querySelectorAll('#medicineGrid label');
-  if (medSearch) {
-    medSearch.addEventListener('input', function () {
-      const term = this.value.toLowerCase();
-      medItems.forEach(item => {
-        const text = item.textContent.toLowerCase();
-        item.style.display = text.includes(term) ? '' : 'none';
+    // MEDICINE SEARCH
+    const medSearch=document.getElementById('medSearch');
+    const medItems=document.querySelectorAll('#medicineGrid label');
+    medSearch.addEventListener('input',function(){
+      const term=this.value.toLowerCase();
+      medItems.forEach(item=>{
+        const text=item.textContent.toLowerCase();
+        item.style.display=text.includes(term)?'':'none';
       });
     });
-  }
-</script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// Attach event to all checkboxes with class "price-check"
-document.querySelectorAll('.price-check').forEach(checkbox => {
-  checkbox.addEventListener('change', updateTotal);
-});
-
-function updateTotal() {
-  let total = 0;
-  document.querySelectorAll('.price-check:checked').forEach(cb => {
-    total += parseFloat(cb.getAttribute('data-price'));
-  });
-  document.getElementById('total-price').textContent = total;
-}
-
+  </script>
 </body>
 </html>
