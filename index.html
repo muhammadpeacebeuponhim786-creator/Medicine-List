@@ -1,37 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="ABBOT Medicine Price List with purchase and sale rates.">
-  <title>ABBOT Medicine Price List</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gynae Hospital</title>
+  <meta name="description" content="Gynae Hospital - Available Tests and Medicines Price List." />
+  <!-- Font Awesome CDN for Back-to-Top icon -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    integrity="sha512-1hXkGkZgUwQYnO0PjGZ8zqFQBrMJw8YOpAWY6rtS3Xb7l6Enlm7GLuX4vmCevz7bNysGE5qRzglpUO3oCkY2xg=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
   <style>
     body {
       margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-      color: #fff;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f9f9f9;
+      color: #333;
+      line-height: 1.6;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      background: #0072ff;
+      color: white;
+      padding: 15px 20px;
       display: flex;
-      flex-direction: column;
+      justify-content: space-between;
       align-items: center;
-      justify-content: flex-start;
-      min-height: 100vh;
-      padding: 20px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
 
-    h1 {
-      margin: 20px 0;
-      font-size: 2.5rem;
+    header h1 {
+      margin: 0;
+      font-size: 1.5rem;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    section {
+      padding: 50px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    h2 {
       text-align: center;
-      background: linear-gradient(90deg, #00c6ff, #0072ff);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      letter-spacing: 2px;
+      margin-bottom: 20px;
+      color: #0072ff;
     }
 
-    .search-box {
-      margin-bottom: 10px;
+    .table-container {
+      overflow-x: auto;
+      margin-top: 20px;
+    }
+
+    table {
       width: 100%;
+      border-collapse: collapse;
+      background: white;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    caption {
+      caption-side: top;
+      padding: 12px;
+      font-weight: bold;
+      font-size: 1.2rem;
+      text-align: left;
+      color: #0072ff;
+    }
+
+    th, td {
+      padding: 12px 15px;
+      border-bottom: 1px solid #ddd;
+      text-align: left;
+    }
+
+    th {
+      background: #e9f1fb;
+      text-transform: uppercase;
+      font-size: 0.9rem;
+      letter-spacing: 0.5px;
+    }
+
+    tr:hover {
+      background: #f1faff;
+    }
+
+    td[data-label="Purchase Rate"],
+    td[data-label="Sale Rate"] {
+      text-align: right;
+    }
+
+    /* Search box styles */
+    .search-box {
+      margin: 10px auto;
       max-width: 500px;
       display: flex;
       gap: 10px;
@@ -39,235 +116,217 @@
 
     .search-box input {
       flex: 1;
-      padding: 10px 15px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
       font-size: 1rem;
-      border-radius: 8px;
-      border: none;
-      outline: none;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
     }
 
     .search-box button {
       padding: 10px 15px;
-      font-size: 1rem;
-      border: none;
-      border-radius: 8px;
       background: #0072ff;
       color: white;
+      border: none;
+      border-radius: 6px;
       cursor: pointer;
-      transition: 0.3s;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
     }
 
     .search-box button:hover {
-      background: #00c6ff;
+      background: #005ad3;
     }
 
     .counter {
-      margin-bottom: 20px;
-      font-size: 1rem;
-      color: #ccc;
-    }
-
-    .table-container {
-      width: 100%;
-      max-width: 1100px;
-      overflow-x: auto;
-    }
-
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      background: rgba(255, 255, 255, 0.05);
-      border-radius: 12px;
-      overflow: hidden;
-      backdrop-filter: blur(12px);
-      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
-    }
-
-    caption {
-      caption-side: top;
-      padding: 12px;
-      font-weight: bold;
-      color: #00c6ff;
-      font-size: 1.3rem;
-      text-align: left;
-    }
-
-    th, td {
-      padding: 14px 18px;
-      text-align: left;
-    }
-
-    th {
-      background: rgba(0, 114, 255, 0.8);
-      color: #fff;
-      text-transform: uppercase;
-      font-size: 0.9rem;
-      letter-spacing: 1px;
-    }
-
-    tr:nth-child(even) {
-      background: rgba(255, 255, 255, 0.08);
-    }
-
-    tr:hover {
-      background: rgba(0, 198, 255, 0.25);
-      transition: 0.3s;
-    }
-
-    td {
+      margin: 10px 0;
       font-size: 0.95rem;
-      color: #e0e0e0;
+      color: #555;
     }
 
-    /* Right-align prices */
-    td[data-label="Purchase Rate"],
-    td[data-label="Sale Rate"] {
-      text-align: right;
-    }
-
-    /* Highlight style */
     mark {
       background: yellow;
       color: black;
-      font-weight: bold;
       padding: 0 2px;
-      border-radius: 3px;
+      border-radius: 2px;
     }
 
-    /* Mobile view */
+    /* Back-to-Top button */
+    .back-to-top {
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: transparent;
+      border: 2px solid #0072ff;
+      color: #0072ff;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: background 0.3s, color 0.3s;
+      z-index: 999;
+    }
+
+    .back-to-top:hover {
+      background: #0072ff;
+      color: white;
+    }
+
+    /* Responsive */
     @media (max-width: 768px) {
-      table, thead, tbody, th, td, tr {
-        display: block;
-        width: 100%;
-      }
-      th {
-        display: none;
-      }
-      tr {
-        margin-bottom: 15px;
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        border-radius: 8px;
-        overflow: hidden;
-      }
-      td {
-        display: flex;
-        justify-content: space-between;
-        padding: 12px;
-        font-size: 0.9rem;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-      }
-      td:last-child {
-        border-bottom: none;
-      }
-      td::before {
-        content: attr(data-label);
-        font-weight: bold;
-        color: #00c6ff;
+      th, td {
+        font-size: 0.85rem;
       }
     }
   </style>
 </head>
 <body>
-  <h1>ABBOT Medicine Price List</h1>
+  <header>
+    <h1>Gynae Hospital</h1>
+    <nav>
+      <a href="#tests">Available Tests</a>
+      <a href="#medicines">Medicines</a>
+    </nav>
+  </header>
 
-  <!-- Search Box -->
-  <div class="search-box">
-    <input type="text" id="searchInput" placeholder="Search by code, name, or price...">
-    <button id="clearBtn">Clear</button>
-  </div>
+  <!-- Available Tests Section -->
+  <section id="tests">
+    <h2>Available Tests</h2>
+    <div class="table-container">
+      <table>
+        <caption>Tests Offered</caption>
+        <thead>
+          <tr>
+            <th>Test Code</th>
+            <th>Test Name</th>
+            <th>Rate (PKR)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>101</td>
+            <td>Ultrasound</td>
+            <td>1500</td>
+          </tr>
+          <tr>
+            <td>102</td>
+            <td>Blood Test</td>
+            <td>500</td>
+          </tr>
+          <tr>
+            <td>103</td>
+            <td>Urine Test</td>
+            <td>300</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
 
-  <!-- Counter -->
-  <div class="counter" id="resultCount">Total Items: 8</div>
+  <!-- Medicines Section -->
+  <section id="medicines">
+    <h2>Medicines</h2>
 
-  <div class="table-container">
-    <table id="medicineTable">
-      <caption>ABBOT Medicine Price List</caption>
-      <thead>
-        <tr>
-          <th><input type="checkbox" id="selectAll"></th>
-          <th scope="col">Code</th>
-          <th scope="col">Item Name</th>
-          <th scope="col">Purchase Rate</th>
-          <th scope="col">Sale Rate</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td data-label="Select"><input type="checkbox" class="rowCheckbox"></td>
-          <td data-label="Code">10</td>
-          <td data-label="Item Name">DUPHASTON</td>
-          <td data-label="Purchase Rate">PKR 54</td>
-          <td data-label="Sale Rate">PKR 63</td>
-        </tr>
-        <tr>
-          <td data-label="Select"><input type="checkbox" class="rowCheckbox"></td>
-          <td data-label="Code">182</td>
-          <td data-label="Item Name">IBRET FOLIC 500 GRADUMET</td>
-          <td data-label="Purchase Rate">PKR 10</td>
-          <td data-label="Sale Rate">PKR 11</td>
-        </tr>
-        <tr>
-          <td data-label="Select"><input type="checkbox" class="rowCheckbox"></td>
-          <td data-label="Code">196</td>
-          <td data-label="Item Name">T-T- INJ</td>
-          <td data-label="Purchase Rate">PKR 25</td>
-          <td data-label="Sale Rate">PKR 180</td>
-        </tr>
-        <tr>
-          <td data-label="Select"><input type="checkbox" class="rowCheckbox"></td>
-          <td data-label="Code">199</td>
-          <td data-label="Item Name">SURGICAL TAPE KIT</td>
-          <td data-label="Purchase Rate">PKR 27</td>
-          <td data-label="Sale Rate">PKR 50</td>
-        </tr>
-        <tr>
-          <td data-label="Select"><input type="checkbox" class="rowCheckbox"></td>
-          <td data-label="Code">200</td>
-          <td data-label="Item Name">MLITE-1</td>
-          <td data-label="Purchase Rate">PKR 771</td>
-          <td data-label="Sale Rate">PKR 1000</td>
-        </tr>
-        <tr>
-          <td data-label="Select"><input type="checkbox" class="rowCheckbox"></td>
-          <td data-label="Code">211</td>
-          <td data-label="Item Name">D-GEST</td>
-          <td data-label="Purchase Rate">PKR 41</td>
-          <td data-label="Sale Rate">PKR 50</td>
-        </tr>
-        <tr>
-          <td data-label="Select"><input type="checkbox" class="rowCheckbox"></td>
-          <td data-label="Code">213</td>
-          <td data-label="Item Name">ENZ-10</td>
-          <td data-label="Purchase Rate">PKR 63</td>
-          <td data-label="Sale Rate">PKR 88</td>
-        </tr>
-        <tr>
-          <td data-label="Select"><input type="checkbox" class="rowCheckbox"></td>
-          <td data-label="Code">218</td>
-          <td data-label="Item Name">ENZ-10 50 MG</td>
-          <td data-label="Purchase Rate">PKR 33</td>
-          <td data-label="Sale Rate">PKR 48</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
+    <!-- Search Box -->
+    <div class="search-box">
+      <input type="text" id="searchInput" placeholder="Search by code, name, or price...">
+      <button id="clearBtn">Clear</button>
+    </div>
+
+    <!-- Counter -->
+    <div class="counter" id="resultCount">Total Items: 8</div>
+
+    <div class="table-container">
+      <table id="medicineTable">
+        <caption>ABBOT Medicine Price List</caption>
+        <thead>
+          <tr>
+            <th><input type="checkbox" id="selectAll"></th>
+            <th>Code</th>
+            <th>Item Name</th>
+            <th>Purchase Rate</th>
+            <th>Sale Rate</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><input type="checkbox" class="rowCheckbox"></td>
+            <td data-label="Code">10</td>
+            <td data-label="Item Name">DUPHASTON</td>
+            <td data-label="Purchase Rate">PKR 54</td>
+            <td data-label="Sale Rate">PKR 63</td>
+          </tr>
+          <tr>
+            <td><input type="checkbox" class="rowCheckbox"></td>
+            <td data-label="Code">182</td>
+            <td data-label="Item Name">IBRET FOLIC 500 GRADUMET</td>
+            <td data-label="Purchase Rate">PKR 10</td>
+            <td data-label="Sale Rate">PKR 11</td>
+          </tr>
+          <tr>
+            <td><input type="checkbox" class="rowCheckbox"></td>
+            <td data-label="Code">196</td>
+            <td data-label="Item Name">T-T- INJ</td>
+            <td data-label="Purchase Rate">PKR 25</td>
+            <td data-label="Sale Rate">PKR 180</td>
+          </tr>
+          <tr>
+            <td><input type="checkbox" class="rowCheckbox"></td>
+            <td data-label="Code">199</td>
+            <td data-label="Item Name">SURGICAL TAPE KIT</td>
+            <td data-label="Purchase Rate">PKR 27</td>
+            <td data-label="Sale Rate">PKR 50</td>
+          </tr>
+          <tr>
+            <td><input type="checkbox" class="rowCheckbox"></td>
+            <td data-label="Code">200</td>
+            <td data-label="Item Name">MLITE-1</td>
+            <td data-label="Purchase Rate">PKR 771</td>
+            <td data-label="Sale Rate">PKR 1000</td>
+          </tr>
+          <tr>
+            <td><input type="checkbox" class="rowCheckbox"></td>
+            <td data-label="Code">211</td>
+            <td data-label="Item Name">D-GEST</td>
+            <td data-label="Purchase Rate">PKR 41</td>
+            <td data-label="Sale Rate">PKR 50</td>
+          </tr>
+          <tr>
+            <td><input type="checkbox" class="rowCheckbox"></td>
+            <td data-label="Code">213</td>
+            <td data-label="Item Name">ENZ-10</td>
+            <td data-label="Purchase Rate">PKR 63</td>
+            <td data-label="Sale Rate">PKR 88</td>
+          </tr>
+          <tr>
+            <td><input type="checkbox" class="rowCheckbox"></td>
+            <td data-label="Code">218</td>
+            <td data-label="Item Name">ENZ-10 50 MG</td>
+            <td data-label="Purchase Rate">PKR 33</td>
+            <td data-label="Sale Rate">PKR 48</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- Back-to-Top Button -->
+  <button class="back-to-top" id="backToTop">
+    <i class="fas fa-arrow-up"></i>
+  </button>
 
   <script>
-    // Format prices with commas
-    document.querySelectorAll('td[data-label="Purchase Rate"], td[data-label="Sale Rate"]').forEach(td => {
-      let text = td.textContent.replace("PKR", "").trim();
-      if (!isNaN(text)) {
-        td.textContent = "PKR " + Number(text).toLocaleString();
-      }
+    // Smooth Back-to-Top scroll
+    document.getElementById("backToTop").addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
     });
 
-    const searchInput = document.getElementById('searchInput');
-    const clearBtn = document.getElementById('clearBtn');
+    const searchInput = document.getElementById("searchInput");
+    const clearBtn = document.getElementById("clearBtn");
     const rows = document.querySelectorAll("#medicineTable tbody tr");
-    const resultCount = document.getElementById('resultCount');
-    const selectAll = document.getElementById('selectAll');
+    const resultCount = document.getElementById("resultCount");
+    const selectAll = document.getElementById("selectAll");
 
     // Track checkbox states
     const checkboxStates = new WeakMap();
@@ -283,19 +342,15 @@
       let filter = searchInput.value.toLowerCase();
       let visibleCount = 0;
 
-      rows.forEach(row => {
+      rows.forEach((row) => {
         let rowText = row.textContent.toLowerCase();
         const checkbox = row.querySelector(".rowCheckbox");
-
-        // save state before modifying cells
-        if (checkbox) {
-          checkboxStates.set(row, checkbox.checked);
-        }
+        if (checkbox) checkboxStates.set(row, checkbox.checked);
 
         if (rowText.includes(filter)) {
           row.style.display = "";
           visibleCount++;
-          row.querySelectorAll("td").forEach(td => {
+          row.querySelectorAll("td").forEach((td) => {
             if (!td.querySelector("input")) {
               td.innerHTML = highlight(td.textContent, filter);
             }
@@ -304,7 +359,6 @@
           row.style.display = "none";
         }
 
-        // restore checkbox state
         if (checkbox && checkboxStates.has(row)) {
           checkbox.checked = checkboxStates.get(row);
         }
@@ -313,19 +367,18 @@
       resultCount.textContent = `Total Items Found: ${visibleCount}`;
     }
 
-    searchInput.addEventListener('keyup', filterTable);
+    searchInput.addEventListener("keyup", filterTable);
 
     // Clear search
-    clearBtn.addEventListener('click', function () {
+    clearBtn.addEventListener("click", function () {
       searchInput.value = "";
-      rows.forEach(row => {
+      rows.forEach((row) => {
         row.style.display = "";
-        row.querySelectorAll("td").forEach(td => {
+        row.querySelectorAll("td").forEach((td) => {
           if (!td.querySelector("input")) {
             td.innerHTML = td.textContent;
           }
         });
-        // restore checkboxes
         const checkbox = row.querySelector(".rowCheckbox");
         if (checkbox && checkboxStates.has(row)) {
           checkbox.checked = checkboxStates.get(row);
@@ -335,8 +388,8 @@
     });
 
     // Select All functionality
-    selectAll.addEventListener('change', function () {
-      rows.forEach(row => {
+    selectAll.addEventListener("change", function () {
+      rows.forEach((row) => {
         const checkbox = row.querySelector(".rowCheckbox");
         if (checkbox) {
           checkbox.checked = selectAll.checked;
@@ -346,10 +399,10 @@
     });
 
     // Track individual checkbox changes
-    rows.forEach(row => {
+    rows.forEach((row) => {
       const checkbox = row.querySelector(".rowCheckbox");
       if (checkbox) {
-        checkbox.addEventListener('change', () => {
+        checkbox.addEventListener("change", () => {
           checkboxStates.set(row, checkbox.checked);
         });
       }
