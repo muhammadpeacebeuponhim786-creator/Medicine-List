@@ -162,7 +162,51 @@
 
 
 
+.card i {
+  font-size:28px;
+  color:var(--accent);
+  margin-bottom:8px;
+}
 
+/* WhatsApp header links (Saeed Ahmad, phone, Make Appointment) */
+.header-contacts .whatsapp-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #25d366;           /* WhatsApp green for text links */
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: color 0.15s;
+}
+
+.header-contacts .whatsapp-link:hover {
+  color: #128c7e;
+}
+
+/* Make Appointment as a green button while keeping `.btn` look */
+.header-contacts .btn.whatsapp-link {
+  background: #25d366;
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-weight: 700;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.header-contacts .btn.whatsapp-link:hover {
+  background: #128c7e;
+  color: #fff;
+}
+
+/* Welcome / Hero */
+#welcome {
+  padding:76px 20px;
+  ...
+}
 
 
 
@@ -381,10 +425,59 @@
       </div>
     </div>
 
-    <div class="contact">
-      <a href="tel:03004461365" class="btn-phone"><i class="fa-solid fa-phone"></i>&nbsp;0300-4461365</a>
-      <a class="btn-cta" href="#appointment">MAKE APPOINTMENT</a>
-    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="header-contacts">
+  <a href="https://wa.me/923004461365" target="_blank" class="whatsapp-link">
+    <i class="fab fa-whatsapp"></i> Saeed Ahmad
+  </a>
+  <a href="https://wa.me/923004461365" target="_blank" class="whatsapp-link">
+    <i class="fab fa-whatsapp"></i> 03004461365
+  </a>
+  <a href="https://wa.me/923004461365" target="_blank" class="btn whatsapp-link">
+    <i class="fab fa-whatsapp"></i> Make Appointment
+  </a>
+</div>
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
   </header>
 
   <!-- Welcome / Slideshow -->
