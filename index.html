@@ -445,102 +445,101 @@
   </div>
 </section>
 
-<!-- ================== AVAILABLE MEDICINES ================== -->
-<section class="medicine-section">
-  <!-- Left side: ABBOT + AMROS -->
-  <div class="medicine-list left">
-    <h3>ABBOT</h3>
-    <table>
-      <tr><th>Select</th><th>Code</th><th>Item Name</th><th>Sale Rate</th></tr>
-      <tr>
-        <td><input type="checkbox" class="price-check" data-price="63"></td>
-        <td>10</td><td>DUPHASTON</td><td>Rs. 63</td>
-      </tr>
-      <tr>
-        <td><input type="checkbox" class="price-check" data-price="11"></td>
-        <td>182</td><td>IBRET FOLIC 500 GRADUMET</td><td>Rs. 11</td>
-      </tr>
-      <tr>
-        <td><input type="checkbox" class="price-check" data-price="180"></td>
-        <td>196</td><td>T-T- INJ</td><td>Rs. 180</td>
-      </tr>
-      <tr>
-        <td><input type="checkbox" class="price-check" data-price="50"></td>
-        <td>199</td><td>SURGICAL TAPE KIT</td><td>Rs. 50</td>
-      </tr>
-      <tr>
-        <td><input type="checkbox" class="price-check" data-price="1000"></td>
-        <td>200</td><td>MLITE-1</td><td>Rs. 1000</td>
-      </tr>
-      <tr>
-        <td><input type="checkbox" class="price-check" data-price="50"></td>
-        <td>211</td><td>D-GEST</td><td>Rs. 50</td>
-      </tr>
-      <tr>
-        <td><input type="checkbox" class="price-check" data-price="88"></td>
-        <td>213</td><td>ENZ-10</td><td>Rs. 88</td>
-      </tr>
-      <tr>
-        <td><input type="checkbox" class="price-check" data-price="48"></td>
-        <td>218</td><td>ENZ-10 50 MG</td><td>Rs. 48</td>
-      </tr>
-    </table>
 
-    <h3>AMROS</h3>
-    <table>
-      <tr><th>Select</th><th>Code</th><th>Item Name</th><th>Sale Rate</th></tr>
-      <tr>
-        <td><input type="checkbox" class="price-check" data-price="12"></td>
-        <td>14</td><td>SYNTO INJ</td><td>Rs. 12</td>
-      </tr>
-    </table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ================== AVAILABLE MEDICINES ================== -->
+<section id="medicines" class="tests-section" aria-labelledby="medicinesHeading">
+  <h2 id="medicinesHeading"> AVAILABLE MEDICINES</h2>
+
+  <!-- Search box -->
+  <div class="select-all">
+    <input type="text" id="medSearch" placeholder=" Search medicines..." style="padding:8px 12px; width:80%; max-width:500px; border:1px solid #ddd; border-radius:6px;">
   </div>
 
-  <!-- Right side: ANSELL + APSIS -->
-  <div class="medicine-list right">
-    <h3>ANSELL</h3>
-    <table>
-      <tr><th>Select</th><th>Code</th><th>Item Name</th><th>Sale Rate</th></tr>
-      <tr>
-        <td><input type="checkbox" class="price-check" data-price="250"></td>
-        <td>15</td><td>SURGICAL GLOVES NO 7</td><td>Rs. 250</td>
-      </tr>
-      <tr>
-        <td><input type="checkbox" class="price-check" data-price="251"></td>
-        <td>169</td><td>SURGICAL GLOVES NO 7.5</td><td>Rs. 251</td>
-      </tr>
-    </table>
+  <div class="tests-grid" id="medicineGrid">
+    <!-- ABBOT -->
+    <div>
+      <h3>ABBOT</h3>
+      <label><input type="checkbox" class="price-check" data-price="63" data-name="Duphaston"> Duphaston (Rs. 63)</label>
+      <label><input type="checkbox" class="price-check" data-price="11" data-name="Ibret Folic 500 Gradumet"> Ibret Folic 500 Gradumet (Rs. 11)</label>
+      <label><input type="checkbox" class="price-check" data-price="180" data-name="T-T- Inj"> T-T- Inj (Rs. 180)</label>
+      <label><input type="checkbox" class="price-check" data-price="50" data-name="Surgical Tape Kit"> Surgical Tape Kit (Rs. 50)</label>
+      <label><input type="checkbox" class="price-check" data-price="1000" data-name="MLITE-1"> MLITE-1 (Rs. 1000)</label>
+      <label><input type="checkbox" class="price-check" data-price="50" data-name="D-Gest"> D-Gest (Rs. 50)</label>
+      <label><input type="checkbox" class="price-check" data-price="88" data-name="ENZ-10"> ENZ-10 (Rs. 88)</label>
+      <label><input type="checkbox" class="price-check" data-price="48" data-name="ENZ-10 50 MG"> ENZ-10 50 MG (Rs. 48)</label>
+    </div>
 
-    <h3>APSIS</h3>
-    <table>
-      <tr><th>Select</th><th>Code</th><th>Item Name</th><th>Sale Rate</th></tr>
-      <tr>
-        <td><input type="checkbox" class="price-check" data-price="140"></td>
-        <td>12</td><td>ETT TUBE</td><td>Rs. 140</td>
-      </tr>
-      <tr>
-        <td><input type="checkbox" class="price-check" data-price="44"></td>
-        <td>13</td><td>MOVEGUT SACHET</td><td>Rs. 44</td>
-      </tr>
-      <tr>
-        <td><input type="checkbox" class="price-check" data-price="140"></td>
-        <td>16</td><td>DEXTOL WATER 5%1000ML</td><td>Rs. 140</td>
-      </tr>
-      <tr>
-        <td><input type="checkbox" class="price-check" data-price="130"></td>
-        <td>17</td><td>NS 1000 ML</td><td>Rs. 130</td>
-      </tr>
-      <tr>
-        <td><input type="checkbox" class="price-check" data-price="150"></td>
-        <td>18</td><td>RL 1000 ML</td><td>Rs. 150</td>
-      </tr>
-      <tr>
-        <td><input type="checkbox" class="price-check" data-price="120"></td>
-        <td>19</td><td>RL 500 ML</td><td>Rs. 120</td>
-      </tr>
-    </table>
+    <!-- AMROS -->
+    <div>
+      <h3>AMROS</h3>
+      <label><input type="checkbox" class="price-check" data-price="12" data-name="Synto Inj"> Synto Inj (Rs. 12)</label>
+    </div>
+
+    <!-- ANSELL -->
+    <div>
+      <h3>ANSELL</h3>
+      <label><input type="checkbox" class="price-check" data-price="250" data-name="Surgical Gloves No 7"> Surgical Gloves No 7 (Rs. 250)</label>
+      <label><input type="checkbox" class="price-check" data-price="251" data-name="Surgical Gloves No 7.5"> Surgical Gloves No 7.5 (Rs. 251)</label>
+    </div>
+
+    <!-- APSIS -->
+    <div>
+      <h3>APSIS</h3>
+      <label><input type="checkbox" class="price-check" data-price="140" data-name="ETT Tube"> ETT Tube (Rs. 140)</label>
+      <label><input type="checkbox" class="price-check" data-price="44" data-name="Movegut Sachet"> Movegut Sachet (Rs. 44)</label>
+      <label><input type="checkbox" class="price-check" data-price="140" data-name="Dextol Water 5% 1000ml"> Dextol Water 5% 1000ml (Rs. 140)</label>
+      <label><input type="checkbox" class="price-check" data-price="130" data-name="NS 1000ml"> NS 1000ml (Rs. 130)</label>
+      <label><input type="checkbox" class="price-check" data-price="150" data-name="RL 1000ml"> RL 1000ml (Rs. 150)</label>
+      <label><input type="checkbox" class="price-check" data-price="120" data-name="RL 500ml"> RL 500ml (Rs. 120)</label>
+    </div>
   </div>
 </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <!-- Single total box -->
 <div id="total-box">
@@ -569,62 +568,40 @@
   <i class="fas fa-arrow-up" aria-hidden="true"></i>
 </button>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <!-- ================= SCRIPTS ================= -->
-
-<!-- Year, modal helper, kept from original -->
 <script>
+  // ----------------- YEAR -----------------
   document.getElementById('year').textContent = new Date().getFullYear();
-  function updateModal() {
-    let boxes=document.querySelectorAll('.test:checked'); let total=0, count=0, list="<ul>";
-    boxes.forEach(cb=>{ total+=+cb.value; count++; list+=`<li>${cb.dataset.name} - Rs. ${cb.value}</li>`; });
-    list+="</ul>"; document.getElementById('modalContent').innerHTML=(count? list+`<strong>Total: Rs. ${total}</strong>`:"No test selected!");
-    document.getElementById('liveText').textContent=`${count} test${count!==1?"s":""} | Total: Rs. ${total}`;
-  }
-  document.querySelectorAll('.test').forEach(cb=>cb.addEventListener('change',updateModal));
-  document.getElementById('selectAll').addEventListener('change',function(){document.querySelectorAll('.test').forEach(cb=>cb.checked=this.checked);updateModal()});
-  document.getElementById('liveTotal').onclick=()=>document.getElementById('resultModal').style.display="flex";
-  function closeModal(){document.getElementById('resultModal').style.display="none";}
-</script>
 
-<!-- Welcome slideshow (kept) -->
-<script>
-  const welcomeSection = document.getElementById("welcome");
-  const images = [
-    "IMG-20250904-WA0005.jpg",
-    "IMG-20250918-WA0062.jpg",
-    "IMG-20250918-WA0064.jpg",
-    "IMG-20250918-WA0066.jpg",
-    "images (1).jpeg",
-    "images (2).jpeg",
-    "images (5)~2.jpg"
-  ];
-  let index = 0;
-  function changeBackground() {
-    if (!welcomeSection) return;
-    welcomeSection.style.backgroundImage = `url('${images[index]}')`;
-    index = (index + 1) % images.length;
-  }
-  changeBackground();
-  setInterval(changeBackground, 5000);
-</script>
-
-<!-- Tests selection & totals (kept) -->
-<script>
+  // ----------------- TOTAL CALCULATION (Tests + Medicines) -----------------
   function updateTotal() {
-    let total = 0;
-    let count = 0;
-    const allTests = document.querySelectorAll('.test');
+    let total = 0, count = 0;
+    const allChecks = document.querySelectorAll('.test, .price-check');
 
-    allTests.forEach(c => {
+    allChecks.forEach(c => {
       if (c.checked) {
-        total += parseInt(c.value);
+        total += parseInt(c.value || c.dataset.price);
         count++;
       }
     });
 
-    document.getElementById('liveText').textContent = `${count} tests | Total: Rs. ${total}`;
+    document.getElementById('liveText').textContent = `${count} selected | Total: Rs. ${total}`;
 
-    // Sync per-category Select All
+    // Sync category checkboxes (tests only)
     document.querySelectorAll('.select-category').forEach(catBox => {
       const categoryDiv = catBox.closest('div');
       const tests = categoryDiv.querySelectorAll('.test');
@@ -632,15 +609,20 @@
       catBox.checked = allChecked;
     });
 
-    // Sync global Select All
-    const allCategories = document.querySelectorAll('.select-category');
+    // Sync global Select All (tests only)
+    const allTests = document.querySelectorAll('.test');
     const globalSelect = document.getElementById('selectAll');
-    const everythingChecked =
-      [...allTests].length && [...allTests].every(t => t.checked);
-    globalSelect.checked = everythingChecked;
+    if (globalSelect) {
+      const everythingChecked = [...allTests].length && [...allTests].every(t => t.checked);
+      globalSelect.checked = everythingChecked;
+    }
   }
 
-  document.querySelectorAll('.test').forEach(cb => { cb.addEventListener('change', updateTotal); });
+  // Attach listeners
+  document.querySelectorAll('.test, .price-check').forEach(cb =>
+    cb.addEventListener('change', updateTotal)
+  );
+
   const testsGlobalSelect = document.getElementById('selectAll');
   if (testsGlobalSelect) {
     testsGlobalSelect.addEventListener('change', function () {
@@ -661,112 +643,80 @@
     });
   });
 
-  // Initialize total
-  updateTotal();
-</script>
+  updateTotal(); // initialize
 
-<!-- Back-to-top and Medicines scripts -->
-<script>
-  // Back-to-top smooth scroll
+  // ----------------- MODAL -----------------
+  function updateModal() {
+    let boxes = document.querySelectorAll('.test:checked, .price-check:checked');
+    let total = 0, count = 0, list = "<ul>";
+    boxes.forEach(cb => {
+      let price = parseInt(cb.value || cb.dataset.price);
+      let name = cb.dataset.name || cb.nextSibling.textContent.trim();
+      total += price; count++;
+      list += `<li>${name} - Rs. ${price}</li>`;
+    });
+    list += "</ul>";
+    document.getElementById('modalContent').innerHTML =
+      (count ? list+`<strong>Total: Rs. ${total}</strong>` : "No item selected!");
+    document.getElementById('liveText').textContent = `${count} selected | Total: Rs. ${total}`;
+  }
+
+  document.getElementById('liveTotal').onclick = () =>
+    document.getElementById('resultModal').style.display = "flex";
+  function closeModal(){ document.getElementById('resultModal').style.display="none"; }
+
+  // ----------------- SLIDESHOW -----------------
+  const welcomeSection = document.getElementById("welcome");
+  const images = [
+    "IMG-20250904-WA0005.jpg",
+    "IMG-20250918-WA0062.jpg",
+    "IMG-20250918-WA0064.jpg",
+    "IMG-20250918-WA0066.jpg",
+    "images (1).jpeg",
+    "images (2).jpeg",
+    "images (5)~2.jpg"
+  ];
+  let index = 0;
+  function changeBackground() {
+    if (!welcomeSection) return;
+    welcomeSection.style.backgroundImage = `url('${images[index]}')`;
+    index = (index + 1) % images.length;
+  }
+  changeBackground();
+  setInterval(changeBackground, 5000);
+
+  // ----------------- BACK TO TOP -----------------
   document.getElementById("backToTop").addEventListener("click", () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   });
 
-  // Medicines elements (unique IDs/classes)
-  const medSearchInput = document.getElementById('medSearchInput');
-  const medClearBtn = document.getElementById('medClearBtn');
-  const medRows = Array.from(document.querySelectorAll('#medTable tbody tr'));
-  const medResultCount = document.getElementById('medResultCount');
-  const medSelectAll = document.getElementById('medSelectAll');
-  const medRowCheckboxes = Array.from(document.querySelectorAll('.medRowCheckbox'));
-
-  // Track states
-  const medCheckboxStates = new WeakMap();
-
-  // Highlight helper
-  function medHighlight(text, term) {
-    if (!term) return text;
-    const regex = new RegExp(`(${term})`, 'gi');
-    return text.replace(regex, '<mark>$1</mark>');
-  }
-
-  // Format PKR values with commas
-  medRows.forEach(row => {
-    row.querySelectorAll('[data-label="Purchase Rate"], [data-label="Sale Rate"]').forEach(td => {
-      const raw = td.textContent.replace(/PKR\s*/i, '').trim();
-      const num = Number(raw.replace(/,/g, ''));
-      if (!Number.isNaN(num)) {
-        td.textContent = 'PKR ' + num.toLocaleString();
-      }
-    });
-  });
-
-  // Filter
-  function medFilterTable() {
-    const filter = (medSearchInput.value || '').toLowerCase().trim();
-    let visible = 0;
-    medRows.forEach(row => {
-      const checkbox = row.querySelector('.medRowCheckbox');
-      if (checkbox) medCheckboxStates.set(row, checkbox.checked);
-
-      const text = row.textContent.toLowerCase();
-      if (text.includes(filter)) {
-        row.style.display = '';
-        visible++;
-        row.querySelectorAll('td').forEach(td => {
-          if (!td.querySelector('input')) {
-            td.innerHTML = medHighlight(td.textContent, filter);
-          }
-        });
-      } else {
-        row.style.display = 'none';
-      }
-
-      if (checkbox && medCheckboxStates.has(row)) {
-        checkbox.checked = medCheckboxStates.get(row);
-      }
-    });
-    medResultCount.textContent = `Total Items Found: ${visible}`;
-  }
-
-  medSearchInput.addEventListener('input', medFilterTable);
-
-  // Clear search
-  medClearBtn.addEventListener('click', () => {
-    medSearchInput.value = '';
-    medRows.forEach(row => {
-      row.style.display = '';
-      row.querySelectorAll('td').forEach(td => {
-        if (!td.querySelector('input')) td.innerHTML = td.textContent;
-      });
-      const cb = row.querySelector('.medRowCheckbox');
-      if (cb && medCheckboxStates.has(row)) cb.checked = medCheckboxStates.get(row);
-    });
-    medResultCount.textContent = `Total Items: ${medRows.length}`;
-  });
-
-  // Select All (medicines)
-  if (medSelectAll) {
-    medSelectAll.addEventListener('change', () => {
-      medRowCheckboxes.forEach(cb => {
-        cb.checked = medSelectAll.checked;
-        const row = cb.closest('tr');
-        if (row) medCheckboxStates.set(row, cb.checked);
+  // ----------------- MEDICINE SEARCH -----------------
+  const medSearch = document.getElementById('medSearch');
+  const medItems = document.querySelectorAll('#medicineGrid label');
+  if (medSearch) {
+    medSearch.addEventListener('input', function () {
+      const term = this.value.toLowerCase();
+      medItems.forEach(item => {
+        const text = item.textContent.toLowerCase();
+        item.style.display = text.includes(term) ? '' : 'none';
       });
     });
   }
-
-  // Track individual med checkbox changes
-  medRowCheckboxes.forEach(cb => {
-    cb.addEventListener('change', () => {
-      const row = cb.closest('tr');
-      if (row) medCheckboxStates.set(row, cb.checked);
-    });
-  });
-
-  // Initialize med counter
-  medResultCount.textContent = `Total Items: ${medRows.length}`;
 </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // Attach event to all checkboxes with class "price-check"
 document.querySelectorAll('.price-check').forEach(checkbox => {
   checkbox.addEventListener('change', updateTotal);
