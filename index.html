@@ -439,95 +439,248 @@
     </div>
   </section>
 
-  <!-- Medicines (Accordion) -->
-  <section class="section" aria-labelledby="medicinesHeading">
-    <h2 id="medicinesHeading">💊 Available Medicines</h2>
 
-    <div class="med-controls" style="margin-top:10px;">
-      <input type="search" id="medSearch" placeholder="Search medicines (e.g., duphaston, glove)...">
-      <button id="medClearBtn" style="padding:10px 12px;border-radius:8px;background:var(--accent);color:#fff;border:none;cursor:pointer">Clear</button>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Medicines (Accordion) -->
+<section class="section" aria-labelledby="medicinesHeading">
+  <h2 id="medicinesHeading">💊 Available Medicines</h2>
+
+  <div class="med-controls" style="margin-top:10px;">
+    <input type="search" id="medSearch" placeholder="Search medicines (e.g., duphaston, glove)...">
+    <button id="medClearBtn" style="padding:10px 12px;border-radius:8px;background:var(--accent);color:#fff;border:none;cursor:pointer">Clear</button>
+  </div>
+
+  <div id="medicineAccordion" class="accordion">
+
+    <!-- ABBOT -->
+    <div class="accordion-item" data-company="ABBOT">
+      <div class="accordion-header" role="button" tabindex="0" aria-expanded="false">
+        <h4>ABBOT</h4>
+        <div class="count">10 items</div>
+      </div>
+      <div class="accordion-body" aria-hidden="true">
+        <div class="med-grid">
+          <label><input type="checkbox" class="price-check" value="63" data-name="DUPHASTON"> 10 - DUPHASTON (Rs. 63)</label>
+          <label><input type="checkbox" class="price-check" value="11" data-name="IBRET FOLIC 500 GRADUMET"> 182 - IBRET FOLIC 500 GRADUMET (Rs. 11)</label>
+          <label><input type="checkbox" class="price-check" value="180" data-name="T-T- INJ"> 196 - T-T- INJ (Rs. 180)</label>
+          <label><input type="checkbox" class="price-check" value="50" data-name="SURGICAL TAPE KIT"> 199 - SURGICAL TAPE KIT (Rs. 50)</label>
+          <label><input type="checkbox" class="price-check" value="1000" data-name="MLITE-1"> 200 - MLITE-1 (Rs. 1000)</label>
+          <label><input type="checkbox" class="price-check" value="50" data-name="D-GEST"> 211 - D-GEST (Rs. 50)</label>
+          <label><input type="checkbox" class="price-check" value="88" data-name="ENZ-10"> 213 - ENZ-10 (Rs. 88)</label>
+          <label><input type="checkbox" class="price-check" value="48" data-name="ENZ-10 50 MG"> 218 - ENZ-10 50 MG (Rs. 48)</label>
+          <label><input type="checkbox" class="price-check" value="13" data-name="RIDOSPA 80MG TAB"> 180 - RIDOSPA 80MG TAB (Rs. 13)</label>
+          <label><input type="checkbox" class="price-check" value="50" data-name="GRASIRON TAB"> 203 - GRASIRON TAB (Rs. 50)</label>
+        </div>
+      </div>
     </div>
 
-    <div id="medicineAccordion" class="accordion">
-
-      <!-- ABBOT -->
-      <div class="accordion-item" data-company="ABBOT">
-        <div class="accordion-header" role="button" tabindex="0" aria-expanded="false">
-          <h4>ABBOT</h4>
-          <div class="count">8 items</div>
-        </div>
-        <div class="accordion-body" aria-hidden="true">
-          <div class="med-grid">
-            <label><input type="checkbox" class="price-check" value="63" data-name="DUPHASTON"> 10 - DUPHASTON (Rs. 63)</label>
-            <label><input type="checkbox" class="price-check" value="11" data-name="IBRET FOLIC 500 GRADUMET"> 182 - IBRET FOLIC 500 GRADUMET (Rs. 11)</label>
-            <label><input type="checkbox" class="price-check" value="180" data-name="T-T- INJ"> 196 - T-T- INJ (Rs. 180)</label>
-            <label><input type="checkbox" class="price-check" value="50" data-name="SURGICAL TAPE KIT"> 199 - SURGICAL TAPE KIT (Rs. 50)</label>
-            <label><input type="checkbox" class="price-check" value="1000" data-name="MLITE-1"> 200 - MLITE-1 (Rs. 1000)</label>
-            <label><input type="checkbox" class="price-check" value="50" data-name="D-GEST"> 211 - D-GEST (Rs. 50)</label>
-            <label><input type="checkbox" class="price-check" value="88" data-name="ENZ-10"> 213 - ENZ-10 (Rs. 88)</label>
-            <label><input type="checkbox" class="price-check" value="48" data-name="ENZ-10 50 MG"> 218 - ENZ-10 50 MG (Rs. 48)</label>
-          </div>
+    <!-- AMROS -->
+    <div class="accordion-item" data-company="AMROS">
+      <div class="accordion-header" role="button" tabindex="0" aria-expanded="false">
+        <h4>AMROS</h4>
+        <div class="count">2 items</div>
+      </div>
+      <div class="accordion-body" aria-hidden="true">
+        <div class="med-grid">
+          <label><input type="checkbox" class="price-check" value="12" data-name="SYNTO INJ"> 14 - SYNTO INJ (Rs. 12)</label>
+          <label><input type="checkbox" class="price-check" value="150" data-name="LIQUID PARFEEN"> 33 - LIQUID PARFEEN (Rs. 150)</label>
         </div>
       </div>
+    </div>
 
-      <!-- AMROS -->
-      <div class="accordion-item" data-company="AMROS">
-        <div class="accordion-header" role="button" tabindex="0" aria-expanded="false">
-          <h4>AMROS</h4>
-          <div class="count">1 item</div>
-        </div>
-        <div class="accordion-body" aria-hidden="true">
-          <div class="med-grid">
-            <label><input type="checkbox" class="price-check" value="12" data-name="SYNTO INJ"> 14 - SYNTO INJ (Rs. 12)</label>
-          </div>
+    <!-- ANSELL -->
+    <div class="accordion-item" data-company="ANSELL">
+      <div class="accordion-header" role="button" tabindex="0" aria-expanded="false">
+        <h4>ANSELL</h4>
+        <div class="count">3 items</div>
+      </div>
+      <div class="accordion-body" aria-hidden="true">
+        <div class="med-grid">
+          <label><input type="checkbox" class="price-check" value="250" data-name="SURGICAL GLOVES NO 7"> 15 - SURGICAL GLOVES NO 7 (Rs. 250)</label>
+          <label><input type="checkbox" class="price-check" value="251" data-name="SURGICAL GLOVES NO 7.5"> 169 - SURGICAL GLOVES NO 7.5 (Rs. 251)</label>
+          <label><input type="checkbox" class="price-check" value="250" data-name="SURGICAL GLOVES NO 6.5"> 119 - SURGICAL GLOVES NO 6.5 (Rs. 250)</label>
         </div>
       </div>
+    </div>
 
-      <!-- ANSELL -->
-      <div class="accordion-item" data-company="ANSELL">
-        <div class="accordion-header" role="button" tabindex="0" aria-expanded="false">
-          <h4>ANSELL</h4>
-          <div class="count">2 items</div>
-        </div>
-        <div class="accordion-body" aria-hidden="true">
-          <div class="med-grid">
-            <label><input type="checkbox" class="price-check" value="250" data-name="SURGICAL GLOVES NO 7"> 15 - SURGICAL GLOVES NO 7 (Rs. 250)</label>
-            <label><input type="checkbox" class="price-check" value="251" data-name="SURGICAL GLOVES NO 7.5"> 169 - SURGICAL GLOVES NO 7.5 (Rs. 251)</label>
-          </div>
+    <!-- APSIS -->
+    <div class="accordion-item" data-company="APSIS">
+      <div class="accordion-header" role="button" tabindex="0" aria-expanded="false">
+        <h4>APSIS</h4>
+        <div class="count">7 items</div>
+      </div>
+      <div class="accordion-body" aria-hidden="true">
+        <div class="med-grid">
+          <label><input type="checkbox" class="price-check" value="140" data-name="ETT TUBE"> 12 - ETT TUBE (Rs. 140)</label>
+          <label><input type="checkbox" class="price-check" value="44" data-name="MOVEGUT SACHET"> 13 - MOVEGUT SACHET (Rs. 44)</label>
+          <label><input type="checkbox" class="price-check" value="140" data-name="DEXTOL WATER 5%1000ML"> 16 - DEXTOL WATER 5%1000ML (Rs. 140)</label>
+          <label><input type="checkbox" class="price-check" value="130" data-name="NS 1000 ML"> 17 - NS 1000 ML (Rs. 130)</label>
+          <label><input type="checkbox" class="price-check" value="150" data-name="RL 1000 ML"> 18 - RL 1000 ML (Rs. 150)</label>
+          <label><input type="checkbox" class="price-check" value="120" data-name="RL 500 ML"> 19 - RL 500 ML (Rs. 120)</label>
+          <label><input type="checkbox" class="price-check" value="35" data-name="CRAN BERRY SACHET"> 36 - CRAN BERRY SACHET (Rs. 35)</label>
         </div>
       </div>
-
-      <!-- APSIS -->
-      <div class="accordion-item" data-company="APSIS">
-        <div class="accordion-header" role="button" tabindex="0" aria-expanded="false">
-          <h4>APSIS</h4>
-          <div class="count">6 items</div>
-        </div>
-        <div class="accordion-body" aria-hidden="true">
-          <div class="med-grid">
-            <label><input type="checkbox" class="price-check" value="140" data-name="ETT TUBE"> 12 - ETT TUBE (Rs. 140)</label>
-            <label><input type="checkbox" class="price-check" value="44" data-name="MOVEGUT SACHET"> 13 - MOVEGUT SACHET (Rs. 44)</label>
-            <label><input type="checkbox" class="price-check" value="140" data-name="DEXTOL WATER 5%1000ML"> 16 - DEXTOL WATER 5%1000ML (Rs. 140)</label>
-            <label><input type="checkbox" class="price-check" value="130" data-name="NS 1000 ML"> 17 - NS 1000 ML (Rs. 130)</label>
-            <label><input type="checkbox" class="price-check" value="150" data-name="RL 1000 ML"> 18 - RL 1000 ML (Rs. 150)</label>
-            <label><input type="checkbox" class="price-check" value="120" data-name="RL 500 ML"> 19 - RL 500 ML (Rs. 120)</label>
-          </div>
-        </div>
-      </div>
-
     </div>
   </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   <!-- Live Total button -->
   <div id="liveTotal" title="Click to view selected items">
     <span id="liveText">0 selected | Total: Rs. 0</span>
   </div>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
 
   <!-- Floating WhatsApp button (prefilled message) + visible label with name and number -->
   <div class="whatsapp-label" aria-hidden="true">SAEED AHMAD — 0300-4461365</div>
   <a class="btn-whatsapp-floating" href="https://wa.me/923004461365?text=Hello%20Saeed%20Ahmad%2C%20I%20need%20information%20about%20tests%2Fmedicines." target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp with Saeed Ahmad">
     <i class="fa-brands fa-whatsapp"></i>
   </a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   <!-- Modal -->
   <div id="resultModal">
@@ -541,8 +694,97 @@
     </div>
   </div>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   <!-- Back to top -->
   <button id="backToTop" class="back-to-top" aria-label="Back to top"><i class="fa-solid fa-up-long"></i></button>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   <!-- Location (Google Maps embed) -->
   <section class="section" id="location">
