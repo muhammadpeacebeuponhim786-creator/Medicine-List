@@ -187,6 +187,83 @@
       .med-search-box { padding: 0 12px; }
       .med-table th, .med-table td { font-size:0.92rem; padding:10px; }
     }
+    /* Medicines section layout */
+.medicine-section {
+  display: flex;
+  justify-content: space-between;
+  width: 95%;
+  margin: 20px auto;
+  gap: 20px;
+}
+
+.medicine-list {
+  flex: 1;
+  background: #f9f9f9;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.medicine-list h3 {
+  text-align: center;
+  margin: 15px 0 10px;
+  background: #007b83;
+  color: #fff;
+  padding: 6px;
+  border-radius: 5px;
+}
+
+/* Medicine tables */
+.medicine-list table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.medicine-list th, 
+.medicine-list td {
+  border: 1px solid #ddd;
+  padding: 6px 8px;
+  text-align: left;
+}
+
+.medicine-list th {
+  background: #e0f7fa;
+  font-weight: bold;
+}
+
+.medicine-list tr:nth-child(even) {
+  background: #fdfdfd;
+}
+
+/* Total box */
+#total-box {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #007b83;
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 18px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+/* Clear All button */
+#total-box button {
+  margin-top: 8px;
+  padding: 6px 12px;
+  border: none;
+  background: #ff5252;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+#total-box button:hover {
+  background: #e04848;
+}
   </style>
 </head>
 
@@ -368,21 +445,45 @@
   </div>
 </section>
 
+<!-- ================== AVAILABLE MEDICINES ================== -->
 <section class="medicine-section">
-  <!-- Example ABBOT -->
+  <!-- Left side: ABBOT + AMROS -->
   <div class="medicine-list left">
     <h3>ABBOT</h3>
     <table>
       <tr><th>Select</th><th>Code</th><th>Item Name</th><th>Sale Rate</th></tr>
       <tr>
         <td><input type="checkbox" class="price-check" data-price="63"></td>
-        <td>10</td><td>DUPHASTON</td><td>63</td>
+        <td>10</td><td>DUPHASTON</td><td>Rs. 63</td>
       </tr>
       <tr>
         <td><input type="checkbox" class="price-check" data-price="11"></td>
-        <td>182</td><td>IBRET FOLIC 500 GRADUMET</td><td>11</td>
+        <td>182</td><td>IBRET FOLIC 500 GRADUMET</td><td>Rs. 11</td>
       </tr>
-      <!-- continue same pattern for other ABBOT items -->
+      <tr>
+        <td><input type="checkbox" class="price-check" data-price="180"></td>
+        <td>196</td><td>T-T- INJ</td><td>Rs. 180</td>
+      </tr>
+      <tr>
+        <td><input type="checkbox" class="price-check" data-price="50"></td>
+        <td>199</td><td>SURGICAL TAPE KIT</td><td>Rs. 50</td>
+      </tr>
+      <tr>
+        <td><input type="checkbox" class="price-check" data-price="1000"></td>
+        <td>200</td><td>MLITE-1</td><td>Rs. 1000</td>
+      </tr>
+      <tr>
+        <td><input type="checkbox" class="price-check" data-price="50"></td>
+        <td>211</td><td>D-GEST</td><td>Rs. 50</td>
+      </tr>
+      <tr>
+        <td><input type="checkbox" class="price-check" data-price="88"></td>
+        <td>213</td><td>ENZ-10</td><td>Rs. 88</td>
+      </tr>
+      <tr>
+        <td><input type="checkbox" class="price-check" data-price="48"></td>
+        <td>218</td><td>ENZ-10 50 MG</td><td>Rs. 48</td>
+      </tr>
     </table>
 
     <h3>AMROS</h3>
@@ -390,23 +491,23 @@
       <tr><th>Select</th><th>Code</th><th>Item Name</th><th>Sale Rate</th></tr>
       <tr>
         <td><input type="checkbox" class="price-check" data-price="12"></td>
-        <td>14</td><td>SYNTO INJ</td><td>12</td>
+        <td>14</td><td>SYNTO INJ</td><td>Rs. 12</td>
       </tr>
     </table>
   </div>
 
-  <!-- Right side example (ANSELL + APSIS) -->
+  <!-- Right side: ANSELL + APSIS -->
   <div class="medicine-list right">
     <h3>ANSELL</h3>
     <table>
       <tr><th>Select</th><th>Code</th><th>Item Name</th><th>Sale Rate</th></tr>
       <tr>
         <td><input type="checkbox" class="price-check" data-price="250"></td>
-        <td>15</td><td>SURGICAL GLOVES NO 7</td><td>250</td>
+        <td>15</td><td>SURGICAL GLOVES NO 7</td><td>Rs. 250</td>
       </tr>
       <tr>
         <td><input type="checkbox" class="price-check" data-price="251"></td>
-        <td>169</td><td>SURGICAL GLOVES NO 7.5</td><td>251</td>
+        <td>169</td><td>SURGICAL GLOVES NO 7.5</td><td>Rs. 251</td>
       </tr>
     </table>
 
@@ -415,31 +516,37 @@
       <tr><th>Select</th><th>Code</th><th>Item Name</th><th>Sale Rate</th></tr>
       <tr>
         <td><input type="checkbox" class="price-check" data-price="140"></td>
-        <td>12</td><td>ETT TUBE</td><td>140</td>
+        <td>12</td><td>ETT TUBE</td><td>Rs. 140</td>
       </tr>
       <tr>
         <td><input type="checkbox" class="price-check" data-price="44"></td>
-        <td>13</td><td>MOVEGUT SACHET</td><td>44</td>
+        <td>13</td><td>MOVEGUT SACHET</td><td>Rs. 44</td>
       </tr>
       <tr>
         <td><input type="checkbox" class="price-check" data-price="140"></td>
-        <td>16</td><td>DEXTOL WATER 5%1000ML</td><td>140</td>
+        <td>16</td><td>DEXTOL WATER 5%1000ML</td><td>Rs. 140</td>
       </tr>
       <tr>
         <td><input type="checkbox" class="price-check" data-price="130"></td>
-        <td>17</td><td>NS 1000 ML</td><td>130</td>
+        <td>17</td><td>NS 1000 ML</td><td>Rs. 130</td>
       </tr>
       <tr>
         <td><input type="checkbox" class="price-check" data-price="150"></td>
-        <td>18</td><td>RL 1000 ML</td><td>150</td>
+        <td>18</td><td>RL 1000 ML</td><td>Rs. 150</td>
       </tr>
       <tr>
         <td><input type="checkbox" class="price-check" data-price="120"></td>
-        <td>19</td><td>RL 500 ML</td><td>120</td>
+        <td>19</td><td>RL 500 ML</td><td>Rs. 120</td>
       </tr>
     </table>
   </div>
 </section>
+
+<!-- Single total box -->
+<div id="total-box">
+  Total: Rs. <span id="total-price">0</span><br>
+  <button id="clear-all">Clear All</button>
+</div>
 
 <!-- Single total box (used for both tests + medicines) -->
 <div id="total-box">
