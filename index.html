@@ -1,0 +1,168 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Medicine Price List - ABBOT</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      min-height: 100vh;
+      padding: 20px;
+    }h1 {
+  margin: 20px 0;
+  font-size: 2.5rem;
+  text-align: center;
+  background: linear-gradient(90deg, #00c6ff, #0072ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 2px;
+}
+
+table {
+  width: 95%;
+  max-width: 1000px;
+  border-collapse: collapse;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  overflow: hidden;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+}
+
+caption {
+  caption-side: top;
+  padding: 10px;
+  font-weight: bold;
+  color: #00c6ff;
+  font-size: 1.2rem;
+}
+
+th, td {
+  padding: 14px 18px;
+  text-align: left;
+}
+
+th {
+  background: rgba(0, 114, 255, 0.8);
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+}
+
+tr:nth-child(even) {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+tr:hover {
+  background: rgba(0, 198, 255, 0.25);
+  transition: 0.3s;
+}
+
+td {
+  font-size: 0.95rem;
+  color: #e0e0e0;
+}
+
+@media (max-width: 768px) {
+  table, thead, tbody, th, td, tr {
+    display: block;
+    width: 100%;
+  }
+  th {
+    display: none;
+  }
+  tr {
+    margin-bottom: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  td {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px;
+    font-size: 0.9rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  td:last-child {
+    border-bottom: none;
+  }
+  td::before {
+    content: attr(data-label);
+    font-weight: bold;
+    color: #00c6ff;
+  }
+}
+
+  </style>
+</head>
+<body>  <h1>ABBOT Medicine Price List</h1>  <table>
+    <caption>ABBOT Medicine Price List</caption>
+    <thead>
+      <tr>
+        <th scope="col">Code</th>
+        <th scope="col">Item Name</th>
+        <th scope="col">Purchase Rate</th>
+        <th scope="col">Sale Rate</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td data-label="Code">10</td>
+        <td data-label="Item Name">DUPHASTON</td>
+        <td data-label="Purchase Rate">54</td>
+        <td data-label="Sale Rate">63</td>
+      </tr>
+      <tr>
+        <td data-label="Code">182</td>
+        <td data-label="Item Name">IBRET FOLIC 500 GRADUMET</td>
+        <td data-label="Purchase Rate">10</td>
+        <td data-label="Sale Rate">11</td>
+      </tr>
+      <tr>
+        <td data-label="Code">196</td>
+        <td data-label="Item Name">T-T- INJ</td>
+        <td data-label="Purchase Rate">25</td>
+        <td data-label="Sale Rate">180</td>
+      </tr>
+      <tr>
+        <td data-label="Code">199</td>
+        <td data-label="Item Name">SURGICAL TAPE KIT</td>
+        <td data-label="Purchase Rate">27</td>
+        <td data-label="Sale Rate">50</td>
+      </tr>
+      <tr>
+        <td data-label="Code">200</td>
+        <td data-label="Item Name">MLITE-1</td>
+        <td data-label="Purchase Rate">771</td>
+        <td data-label="Sale Rate">1000</td>
+      </tr>
+      <tr>
+        <td data-label="Code">211</td>
+        <td data-label="Item Name">D-GEST</td>
+        <td data-label="Purchase Rate">41</td>
+        <td data-label="Sale Rate">50</td>
+      </tr>
+      <tr>
+        <td data-label="Code">213</td>
+        <td data-label="Item Name">ENZ-10</td>
+        <td data-label="Purchase Rate">63</td>
+        <td data-label="Sale Rate">88</td>
+      </tr>
+      <tr>
+        <td data-label="Code">218</td>
+        <td data-label="Item Name">ENZ-10 50 MG</td>
+        <td data-label="Purchase Rate">33</td>
+        <td data-label="Sale Rate">48</td>
+      </tr>
+    </tbody>
+  </table></body>
+</html>
