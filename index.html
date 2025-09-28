@@ -102,47 +102,42 @@
 
 
 
-
-/* Administrator note - futuristic pink glowing style */
+/* Administrator note - futuristic light pink glowing style */
 .admin-note {
   text-align: center;
-  font-size: 1.6rem;   /* larger text */
-  font-weight: 800;    /* bolder */
-  color: #ff4fa3;
+  font-size: 3rem;    /* doubled text size */
+  font-weight: 900;
+  color: #ff99cc;     /* lighter pink */
   background: #1a0b1f;
-  border-radius: 16px;
-  padding: 22px 26px;  /* more padding for size */
-  margin: 24px auto;
-  max-width: 680px;    /* slightly wider box */
-  box-shadow: 0 0 22px rgba(255, 79, 163, 0.4);
-  border: 1px solid rgba(255, 79, 163, 0.6);
+  border-radius: 20px;
+  padding: 1em 1.5em; /* em units → scale with font size */
+  margin: 30px auto;
+  max-width: 90%;     /* responsive, always fits screen */
+  box-shadow: 0 0 35px rgba(255, 153, 204, 0.5);
+  border: 1px solid rgba(255, 153, 204, 0.6);
   position: relative;
   overflow: hidden;
-  text-shadow: 0 0 12px rgba(255, 79, 163, 0.7), 0 0 22px rgba(255, 150, 200, 0.6);
-  letter-spacing: 1px;
+  text-shadow: 0 0 16px rgba(255, 153, 204, 0.8),
+               0 0 30px rgba(255, 200, 230, 0.7);
+  letter-spacing: 1.2px;
 }
 
-.admin-note::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    135deg,
-    rgba(255, 79, 163, 0.18),
-    rgba(255, 150, 200, 0.15)
-  );
-  opacity: 0;
-  transition: opacity 0.4s;
-}
 
-.admin-note:hover::before {
-  opacity: 1;
-}
 
-.admin-note strong {
-  color: #ff66b3;
-  text-shadow: 0 0 14px rgba(255, 105, 180, 0.8);
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -251,7 +246,26 @@
 
 
 
+/* Pulse glow animation for WhatsApp number */
+@keyframes pulseGlow {
+  0%, 100% {
+    color: #25d366;
+    text-shadow: 0 0 10px #25d366,
+                 0 0 20px #25d366,
+                 0 0 30px rgba(37, 211, 102, 0.7);
+  }
+  50% {
+    color: #ffffff;
+    text-shadow: 0 0 20px #25d366,
+                 0 0 40px #25d366,
+                 0 0 60px rgba(37, 211, 102, 1);
+  }
+}
 
+/* Apply only to the number link (2nd child) */
+.header-contacts .whatsapp-link:nth-child(2) {
+  animation: pulseGlow 1.8s infinite ease-in-out;
+}
 
 
 
@@ -654,7 +668,7 @@
 
 <!-- Administrator Note -->
 <section class="section admin-note">
-  <p><strong>Administrator:</strong> Sheeba Saeed</p>
+  <p><strong>Administrator:</strong>Dr. Sheeba Saeed</p>
 </section>
 
 
