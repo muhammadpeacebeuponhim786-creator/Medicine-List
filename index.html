@@ -660,6 +660,18 @@
   // Initialize med counter
   medResultCount.textContent = `Total Items: ${medRows.length}`;
 </script>
+// Attach event to all checkboxes with class "price-check"
+document.querySelectorAll('.price-check').forEach(checkbox => {
+  checkbox.addEventListener('change', updateTotal);
+});
+
+function updateTotal() {
+  let total = 0;
+  document.querySelectorAll('.price-check:checked').forEach(cb => {
+    total += parseFloat(cb.getAttribute('data-price'));
+  });
+  document.getElementById('total-price').textContent = total;
+}
 
 </body>
 </html>
