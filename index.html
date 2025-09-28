@@ -368,90 +368,83 @@
   </div>
 </section>
 
-<!-- ================== MEDICINES SECTION (ADDED FROM FILE 1) ================== -->
-<section id="medicines" class="med-section" aria-labelledby="medicinesHeading">
-  <h2 id="medicinesHeading">Medicines</h2>
+<section class="medicine-section">
+  <!-- Example ABBOT -->
+  <div class="medicine-list left">
+    <h3>ABBOT</h3>
+    <table>
+      <tr><th>Select</th><th>Code</th><th>Item Name</th><th>Sale Rate</th></tr>
+      <tr>
+        <td><input type="checkbox" class="price-check" data-price="63"></td>
+        <td>10</td><td>DUPHASTON</td><td>63</td>
+      </tr>
+      <tr>
+        <td><input type="checkbox" class="price-check" data-price="11"></td>
+        <td>182</td><td>IBRET FOLIC 500 GRADUMET</td><td>11</td>
+      </tr>
+      <!-- continue same pattern for other ABBOT items -->
+    </table>
 
-  <div class="med-search-box" role="search">
-    <input type="text" id="medSearchInput" placeholder="Search by code, name, or price..." aria-label="Search medicines">
-    <button id="medClearBtn" type="button" aria-label="Clear search">Clear</button>
+    <h3>AMROS</h3>
+    <table>
+      <tr><th>Select</th><th>Code</th><th>Item Name</th><th>Sale Rate</th></tr>
+      <tr>
+        <td><input type="checkbox" class="price-check" data-price="12"></td>
+        <td>14</td><td>SYNTO INJ</td><td>12</td>
+      </tr>
+    </table>
   </div>
 
-  <div class="med-counter" id="medResultCount">Total Items: 8</div>
+  <!-- Right side example (ANSELL + APSIS) -->
+  <div class="medicine-list right">
+    <h3>ANSELL</h3>
+    <table>
+      <tr><th>Select</th><th>Code</th><th>Item Name</th><th>Sale Rate</th></tr>
+      <tr>
+        <td><input type="checkbox" class="price-check" data-price="250"></td>
+        <td>15</td><td>SURGICAL GLOVES NO 7</td><td>250</td>
+      </tr>
+      <tr>
+        <td><input type="checkbox" class="price-check" data-price="251"></td>
+        <td>169</td><td>SURGICAL GLOVES NO 7.5</td><td>251</td>
+      </tr>
+    </table>
 
-  <div class="med-table-container">
-    <table class="med-table" id="medTable" aria-describedby="medTableCaption">
-      <caption id="medTableCaption">ABBOT Medicine Price List</caption>
-      <thead>
-        <tr>
-          <th><input type="checkbox" id="medSelectAll" aria-label="Select all medicines"></th>
-          <th>Code</th>
-          <th>Item Name</th>
-          <th>Purchase Rate</th>
-          <th>Sale Rate</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><input type="checkbox" class="medRowCheckbox" aria-label="Select DUPHASTON"></td>
-          <td data-label="Code">10</td>
-          <td data-label="Item Name">DUPHASTON</td>
-          <td data-label="Purchase Rate">PKR 54</td>
-          <td data-label="Sale Rate">PKR 63</td>
-        </tr>
-        <tr>
-          <td><input type="checkbox" class="medRowCheckbox"></td>
-          <td data-label="Code">182</td>
-          <td data-label="Item Name">IBRET FOLIC 500 GRADUMET</td>
-          <td data-label="Purchase Rate">PKR 10</td>
-          <td data-label="Sale Rate">PKR 11</td>
-        </tr>
-        <tr>
-          <td><input type="checkbox" class="medRowCheckbox"></td>
-          <td data-label="Code">196</td>
-          <td data-label="Item Name">T-T- INJ</td>
-          <td data-label="Purchase Rate">PKR 25</td>
-          <td data-label="Sale Rate">PKR 180</td>
-        </tr>
-        <tr>
-          <td><input type="checkbox" class="medRowCheckbox"></td>
-          <td data-label="Code">199</td>
-          <td data-label="Item Name">SURGICAL TAPE KIT</td>
-          <td data-label="Purchase Rate">PKR 27</td>
-          <td data-label="Sale Rate">PKR 50</td>
-        </tr>
-        <tr>
-          <td><input type="checkbox" class="medRowCheckbox"></td>
-          <td data-label="Code">200</td>
-          <td data-label="Item Name">MLITE-1</td>
-          <td data-label="Purchase Rate">PKR 771</td>
-          <td data-label="Sale Rate">PKR 1000</td>
-        </tr>
-        <tr>
-          <td><input type="checkbox" class="medRowCheckbox"></td>
-          <td data-label="Code">211</td>
-          <td data-label="Item Name">D-GEST</td>
-          <td data-label="Purchase Rate">PKR 41</td>
-          <td data-label="Sale Rate">PKR 50</td>
-        </tr>
-        <tr>
-          <td><input type="checkbox" class="medRowCheckbox"></td>
-          <td data-label="Code">213</td>
-          <td data-label="Item Name">ENZ-10</td>
-          <td data-label="Purchase Rate">PKR 63</td>
-          <td data-label="Sale Rate">PKR 88</td>
-        </tr>
-        <tr>
-          <td><input type="checkbox" class="medRowCheckbox"></td>
-          <td data-label="Code">218</td>
-          <td data-label="Item Name">ENZ-10 50 MG</td>
-          <td data-label="Purchase Rate">PKR 33</td>
-          <td data-label="Sale Rate">PKR 48</td>
-        </tr>
-      </tbody>
+    <h3>APSIS</h3>
+    <table>
+      <tr><th>Select</th><th>Code</th><th>Item Name</th><th>Sale Rate</th></tr>
+      <tr>
+        <td><input type="checkbox" class="price-check" data-price="140"></td>
+        <td>12</td><td>ETT TUBE</td><td>140</td>
+      </tr>
+      <tr>
+        <td><input type="checkbox" class="price-check" data-price="44"></td>
+        <td>13</td><td>MOVEGUT SACHET</td><td>44</td>
+      </tr>
+      <tr>
+        <td><input type="checkbox" class="price-check" data-price="140"></td>
+        <td>16</td><td>DEXTOL WATER 5%1000ML</td><td>140</td>
+      </tr>
+      <tr>
+        <td><input type="checkbox" class="price-check" data-price="130"></td>
+        <td>17</td><td>NS 1000 ML</td><td>130</td>
+      </tr>
+      <tr>
+        <td><input type="checkbox" class="price-check" data-price="150"></td>
+        <td>18</td><td>RL 1000 ML</td><td>150</td>
+      </tr>
+      <tr>
+        <td><input type="checkbox" class="price-check" data-price="120"></td>
+        <td>19</td><td>RL 500 ML</td><td>120</td>
+      </tr>
     </table>
   </div>
 </section>
+
+<!-- Single total box (used for both tests + medicines) -->
+<div id="total-box">
+  Total: <span id="total-price">0</span>
+</div>
 
 <!-- Footer (kept) -->
 <footer class="site-footer" role="contentinfo">
