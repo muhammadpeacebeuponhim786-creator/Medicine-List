@@ -582,10 +582,14 @@
 
 
 
+
+
+
 <!-- ================= SCRIPTS ================= -->
 <script>
   // ----------------- YEAR -----------------
-  document.getElementById('year').textContent = new Date().getFullYear();
+  const yearEl = document.getElementById('year');
+  if (yearEl) yearEl.textContent = new Date().getFullYear();
 
   // ----------------- TOTAL CALCULATION (Tests + Medicines) -----------------
   function updateTotal() {
@@ -594,33 +598,38 @@
 
     allChecks.forEach(c => {
       if (c.checked) {
-        total += parseInt(c.value || c.dataset.price);
+        const price = parseInt(c.value || c.dataset.price) || 0;
+        total += price;
         count++;
       }
     });
 
-    document.getElementById('liveText').textContent = `${count} selected | Total: Rs. ${total}`;
+    const liveText = document.getElementById('liveText');
+    if (liveText) {
+      liveText.textContent = `${count} selected | Total: Rs. ${total}`;
+    }
 
-    // Sync category checkboxes (tests only)
+    // --- Sync category checkboxes (tests only) ---
     document.querySelectorAll('.select-category').forEach(catBox => {
       const categoryDiv = catBox.closest('div');
-      const tests = categoryDiv.querySelectorAll('.test');
-      const allChecked = [...tests].length && [...tests].every(t => t.checked);
+      const tests = categoryDiv ? categoryDiv.querySelectorAll('.test') : [];
+      const allChecked = tests.length && [...tests].every(t => t.checked);
       catBox.checked = allChecked;
     });
 
-    // Sync global Select All (tests only)
+    // --- Sync global Select All (tests only) ---
     const allTests = document.querySelectorAll('.test');
     const globalSelect = document.getElementById('selectAll');
     if (globalSelect) {
-      const everythingChecked = [...allTests].length && [...allTests].every(t => t.checked);
+      const everythingChecked =
+        allTests.length && [...allTests].every(t => t.checked);
       globalSelect.checked = everythingChecked;
     }
   }
 
   // Attach listeners
   document.querySelectorAll('.test, .price-check').forEach(cb =>
-    cb.addEventListener('change', updateTotal)
+    cb.addEventListener('change', () => { updateTotal(); updateModal(); })
   );
 
   const testsGlobalSelect = document.getElementById('selectAll');
@@ -631,15 +640,17 @@
       allTests.forEach(c => (c.checked = this.checked));
       allCategories.forEach(c => (c.checked = this.checked));
       updateTotal();
+      updateModal();
     });
   }
 
   document.querySelectorAll('.select-category').forEach(selectBox => {
     selectBox.addEventListener('change', function () {
       const categoryDiv = this.closest('div');
-      const tests = categoryDiv.querySelectorAll('.test');
+      const tests = categoryDiv ? categoryDiv.querySelectorAll('.test') : [];
       tests.forEach(t => (t.checked = this.checked));
       updateTotal();
+      updateModal();
     });
   });
 
@@ -647,53 +658,69 @@
 
   // ----------------- MODAL -----------------
   function updateModal() {
-    let boxes = document.querySelectorAll('.test:checked, .price-check:checked');
+    const boxes = document.querySelectorAll('.test:checked, .price-check:checked');
     let total = 0, count = 0, list = "<ul>";
+
     boxes.forEach(cb => {
-      let price = parseInt(cb.value || cb.dataset.price);
-      let name = cb.dataset.name || cb.nextSibling.textContent.trim();
-      total += price; count++;
+      const price = parseInt(cb.value || cb.dataset.price) || 0;
+      const name = cb.dataset.name || cb.closest('label')?.textContent.trim() || cb.closest('tr')?.cells[2]?.textContent.trim() || "Item";
+      total += price;
+      count++;
       list += `<li>${name} - Rs. ${price}</li>`;
     });
+
     list += "</ul>";
-    document.getElementById('modalContent').innerHTML =
-      (count ? list+`<strong>Total: Rs. ${total}</strong>` : "No item selected!");
-    document.getElementById('liveText').textContent = `${count} selected | Total: Rs. ${total}`;
+    const modalContent = document.getElementById('modalContent');
+    if (modalContent) {
+      modalContent.innerHTML = count
+        ? list + `<strong>Total: Rs. ${total}</strong>`
+        : "No item selected!";
+    }
   }
 
-  document.getElementById('liveTotal').onclick = () =>
-    document.getElementById('resultModal').style.display = "flex";
-  function closeModal(){ document.getElementById('resultModal').style.display="none"; }
+  const liveTotal = document.getElementById('liveTotal');
+  if (liveTotal) {
+    liveTotal.onclick = () =>
+      (document.getElementById('resultModal').style.display = "flex");
+  }
+  function closeModal() {
+    const modal = document.getElementById('resultModal');
+    if (modal) modal.style.display = "none";
+  }
 
   // ----------------- SLIDESHOW -----------------
   const welcomeSection = document.getElementById("welcome");
-  const images = [
-    "IMG-20250904-WA0005.jpg",
-    "IMG-20250918-WA0062.jpg",
-    "IMG-20250918-WA0064.jpg",
-    "IMG-20250918-WA0066.jpg",
-    "images (1).jpeg",
-    "images (2).jpeg",
-    "images (5)~2.jpg"
-  ];
-  let index = 0;
-  function changeBackground() {
-    if (!welcomeSection) return;
-    welcomeSection.style.backgroundImage = `url('${images[index]}')`;
-    index = (index + 1) % images.length;
+  if (welcomeSection) {
+    const images = [
+      "IMG-20250904-WA0005.jpg",
+      "IMG-20250918-WA0062.jpg",
+      "IMG-20250918-WA0064.jpg",
+      "IMG-20250918-WA0066.jpg",
+      "images (1).jpeg",
+      "images (2).jpeg",
+      "images (5)~2.jpg"
+    ];
+    let index = 0;
+    function changeBackground() {
+      welcomeSection.style.backgroundImage = `url('${images[index]}')`;
+      index = (index + 1) % images.length;
+    }
+    changeBackground();
+    setInterval(changeBackground, 5000);
   }
-  changeBackground();
-  setInterval(changeBackground, 5000);
 
   // ----------------- BACK TO TOP -----------------
-  document.getElementById("backToTop").addEventListener("click", () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  });
+  const backBtn = document.getElementById("backToTop");
+  if (backBtn) {
+    backBtn.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  }
 
   // ----------------- MEDICINE SEARCH -----------------
   const medSearch = document.getElementById('medSearch');
   const medItems = document.querySelectorAll('#medicineGrid label');
-  if (medSearch) {
+  if (medSearch && medItems.length) {
     medSearch.addEventListener('input', function () {
       const term = this.value.toLowerCase();
       medItems.forEach(item => {
@@ -703,6 +730,39 @@
     });
   }
 </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
