@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Gynae Hospital</title>
   <meta name="description" content="Gynae Hospital - Available Tests and Medicines Price List." />
+
   <!-- Font Awesome CDN for Back-to-Top icon -->
   <link
     rel="stylesheet"
@@ -13,6 +14,7 @@
     crossorigin="anonymous"
     referrerpolicy="no-referrer"
   />
+
   <style>
     body {
       margin: 0;
@@ -38,6 +40,26 @@
     header h1 {
       margin: 0;
       font-size: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    /* Logo image floating at top-right */
+    .logo-image {
+      position: fixed;
+      top: 15px;
+      right: 15px;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #0072ff;
+      transition: transform 0.3s ease-in-out;
+      z-index: 1001;
+    }
+    .logo-image:hover {
+      transform: rotate(360deg);
     }
 
     nav a {
@@ -167,7 +189,6 @@
       transition: background 0.3s, color 0.3s;
       z-index: 999;
     }
-
     .back-to-top:hover {
       background: #0072ff;
       color: white;
@@ -182,8 +203,14 @@
   </style>
 </head>
 <body>
+  <!-- Floating logo image -->
+  <img src="IMG-20250904-WA0005.jpg" alt="Hospital Logo" class="logo-image">
+
   <header>
-    <h1>Gynae Hospital</h1>
+    <h1>
+      <span style="background: linear-gradient(90deg, #00c6ff, #0072ff); color: white; padding: 5px 10px; border-radius: 6px;">FD</span>
+      Gynae Hospital
+    </h1>
     <nav>
       <a href="#tests">Available Tests</a>
       <a href="#medicines">Medicines</a>
